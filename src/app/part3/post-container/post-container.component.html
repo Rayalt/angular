@@ -1,0 +1,32 @@
+<div class="container">
+	<app-part3-post-form
+		(onAdd)="updatePosts($event)"
+	></app-part3-post-form>
+
+	<h2 class="h2 mt-5 mb-3">
+		Все посты
+	</h2>
+
+	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+		<app-part3-post
+			class="col"
+			*ngFor="let item of postCollection"
+			[onePost]="item"
+			(onDelete)="deletePost($event)"
+		>
+			<div #info>
+				<p
+					[ngClass]="item.text.length > postLength ? 'text-primary' : 'text-secondary'"
+				>
+					<ng-container *ngIf="item.text.length > postLength; else short">
+						Пост длинный
+					</ng-container>
+				</p>
+				<ng-template #short
+				>
+					Пост короткий
+				</ng-template>
+			</div>
+		</app-part3-post>
+	</div>
+</div>

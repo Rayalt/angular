@@ -1,0 +1,239 @@
+<div class="container">
+	<h2 class="h2 mb-3">Примеры использования пайпов</h2>
+
+	<app-shared-card
+		cardClass="bg-info bg-opacity-50 mb-3"
+	>
+		<ng-template #body>
+			* DeprecatedDecimalPipe в документации -- устаревшие пайпы, которые скоро будут удалены
+		</ng-template>
+	</app-shared-card>
+
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Работа с числами
+		</ng-template>
+		<ng-template #body>
+			<p class="font-monospace text-danger mb-1">
+				number для преобразования чисел
+			</p>
+			<p>
+				{{ '{{ ' }}e | number:'1.1-5' }}:
+				<span class="text-primary font-monospace">
+					{{ e | number:'1.1-5' }}
+				</span>
+				(1 число до точки и от 1 до 5 после точки)
+			</p>
+
+			<p>
+				{{ '{{ ' }}e | number:'2.1-3' }}:
+				<span class="text-primary font-monospace">
+					{{ e | number:'2.1-3' }}
+				</span>
+				(2 числа до точки и от 1 до 3 после точки)
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Работа со строками
+		</ng-template>
+		<ng-template #body>
+			<p class="font-monospace text-danger mb-1">
+				uppercase для верхнего регистра
+			</p>
+			<p>
+				{{ '{{ ' }}str | uppercase }}:
+				<span class="text-primary font-monospace">
+					{{ str | uppercase }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				uppercase для нижнего регистра
+			</p>
+			<p>
+				{{ '{{ ' }}str | lowercase }}:
+				<span class="text-primary font-monospace">
+					{{ str | lowercase }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				titlecase для каждого слова с заглавной
+			</p>
+			<p>
+				{{ '{{ ' }}str | titlecase }}:
+				<span class="text-primary font-monospace">
+					{{ str | titlecase }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				slice обрезает строку
+			</p>
+			<p>
+				{{ '{{ ' }}str | slice:1:10-1 }}:
+				<span class="text-primary font-monospace">
+					{{ str | slice:1:10-1 }}
+				</span>
+			</p>
+			<p>
+				{{ '{{ ' }}str | slice:1 }}:
+					<span class="text-primary font-monospace">
+					{{ str | slice:1 }}
+				</span>
+			</p>
+			<p>
+				{{ '{{ ' }}str | slice:1:20 }}:
+				<span class="text-primary font-monospace">
+					{{ str | slice:1:20 }}
+				</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Работа с датами
+		</ng-template>
+		<ng-template #body>
+			<p class="font-monospace text-danger mb-1">
+				date форматирует дату из {{ date }}
+			</p>
+			<p>
+				{{ '{{ ' }}date | date }}:
+				<span class="text-primary font-monospace">
+					{{ date | date }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'fullDate' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'fullDate' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'longDate' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'longDate' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'long' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'long' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'y' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'y' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'yy' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'yy' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'MMMM yy' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'MMMM yy' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'M yy' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'M yy' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'MM yy' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'MM yy' }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}date | date:'MMM, yy' }}:
+				<span class="text-primary font-monospace">
+					{{ date | date:'MMM, yy' }}
+				</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Еще пайпы
+		</ng-template>
+		<ng-template #body>
+			<p>
+				{{ '{{ ' }}float }}:
+				<span class="text-primary font-monospace">
+					{{ float }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				currency добавляет валюту
+			</p>
+			<p>
+				{{ '{{ ' }}float | currency }}:
+				<span class="text-primary font-monospace">
+					{{ float | currency }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				percent добавляет знак % и умножает на 100
+			</p>
+			<p>
+				{{ '{{ ' }}float | percent }}:
+				<span class="text-primary font-monospace">
+					{{ float | percent }}
+				</span>
+			</p>
+			<p>
+				{{ '{{ ' }}float | percent:'2.2-3' }}:
+				<span class="text-primary font-monospace">
+					{{ float | percent:'2.2-3' }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				json не форматирует объект через .toString()
+			</p>
+			<p>
+				{{ '{{ ' }}obj }}:
+				<span class="text-primary font-monospace">
+					{{ obj }}
+				</span>
+			</p>
+
+			<p>
+				{{ '{{ ' }}obj | json }}:
+			</p>
+			<pre class="text-primary font-monospace">{{ obj | json }}</pre>
+		</ng-template>
+	</app-shared-card>
+</div>

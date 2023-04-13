@@ -1,0 +1,147 @@
+<div class="container">
+
+	<h2 class="h2 mb-4">
+		One way bining
+	</h2>
+
+	<div class="row row-cols-1 row-cols-md-3 g-3">
+
+		<!--Интерполяция, вставляем картинку через переменную-->
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #body>
+					<img src="{{img}}" class="w-100" alt="">
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Интерполяция, вставляем картинку через переменную:
+					</p>
+					<p class="text-primary font-monospace">
+						src="{{'{{'}}img}}"
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+
+		<!--Односторонний binding (html связываем с typescript)-->
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #body>
+					<img [src]="img" class="w-100" alt="">
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Односторонний binding, html связываем с typescript через:
+					</p>
+					<p class="text-primary font-monospace">
+						[src]="img"
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+
+		<div class="col">
+			<div class="row row-cols-1 gap-3 h-100">
+				<div class="col">
+					<app-shared-card
+						cardClass="h-100"
+					>
+						<ng-template #body>
+							<div class="mb-3">
+								<label class="form-label" for="eventInput">
+									При вводе
+								</label>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Введите текст"
+									aria-label="Введите текст"
+									aria-describedby="addon"
+									(input)="onInput2($event)"
+									id="eventInput"
+								>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label" for="eventKeyup">
+									При поднятии клавиши
+								</label>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Введите текст"
+									aria-label="Введите текст"
+									aria-describedby="addon"
+									(keyup)="onInput($event)"
+									id="eventKeyup"
+								>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label" for="eventKeyupEnter">
+									По нажатию на <span class="text-primary font-monospace">enter</span>
+								</label>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Введите текст"
+									aria-label="Введите текст"
+									aria-describedby="addon"
+									(keyup.enter)="onInput2($event)"
+									id="eventKeyupEnter"
+								>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label" for="eventBlur">
+									По снятию фокуса
+								</label>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Введите текст"
+									aria-label="Введите текст"
+									aria-describedby="addon"
+									(blur)="onBlur(myInput.value)"
+									#myInput
+									id="eventBlur"
+								>
+							</div>
+						</ng-template>
+						<ng-template #footer>
+							<p class="card-text">
+								Результат ввода:
+								<strong>
+									{{inputValue}}
+								</strong>
+							</p>
+						</ng-template>
+					</app-shared-card>
+				</div>
+
+				<div class="col">
+					<app-shared-card
+						cardClass="h-100"
+					>
+						<ng-template #body>
+							<!--event binding, обратный binding, связывает typescript с html-->
+							<!--TODO: глянуть че это было-->
+							<button class="btn btn-dark my-3" (click)="onClick()">
+								Click this button
+							</button>
+						</ng-template>
+						<ng-template #footer>
+							<p class="card-text">
+								Event binding, обратный binding, связывает typescript с html
+							</p>
+						</ng-template>
+					</app-shared-card>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

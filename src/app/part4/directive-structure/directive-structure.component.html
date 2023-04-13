@@ -1,0 +1,50 @@
+<div class="container">
+
+	<!--Структурная директива *ngIf-->
+	<app-shared-card
+		*ngIf="isVisible"
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Структурная директива *ngIf
+		</ng-template>
+
+		<ng-template #body>
+			<p class="card-text">
+				Вырезать директиву по кнопке "Скрыть директиву" через
+				<span
+					class="d-block text-primary font-monospace"
+				>
+				*ngIf="isVisible"
+			</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+	<!--Собственная структурная директива *myOwnAppIfNot-->
+	<app-shared-card
+		*myOwnAppIfNot="!isVisible"
+	>
+		<ng-template #header>
+			Структурная директива *myOwnAppIfNot
+		</ng-template>
+
+		<ng-template #body>
+			<p class="card-text">
+				Вырезать директиву по кнопке "Скрыть директиву" через
+				<span
+					class="d-block text-primary font-monospace"
+				>
+				*myOwnAppIfNot="!isVisible"
+			</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+	<button
+		class="btn btn-dark mt-3"
+		(click)="isVisible = !isVisible"
+	>
+		{{ isVisible ? 'Скрыть директивы' : 'Показать директивы' }}
+	</button>
+</div>

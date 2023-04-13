@@ -1,0 +1,51 @@
+<div class="container">
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Создание своего пайпа
+		</ng-template>
+
+		<ng-template #body>
+
+			<p class="font-monospace text-danger mb-1">
+				mult
+			</p>
+			<p>
+				{{ '{{ ' }}8 | mult:4 }}:
+				<span class="text-primary font-monospace">
+					{{ 8 | mult:4 }}
+				</span>
+			</p>
+			<p>
+				{{ '{{ ' }}8 | mult }}:
+				<span class="text-primary font-monospace">
+					{{ 8 | mult }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				exMarks
+			</p>
+			<p>
+				{{ '{{ ' }}'&nbsp; &nbsp; &nbsp; &nbsp;Органический Трафик
+				Попахивает Безумием&nbsp; &nbsp; &nbsp;' | exMarks }}:
+				<span class="text-primary font-monospace">
+					{{
+						'&nbsp; &nbsp; &nbsp; &nbsp;Органический Трафик Попахивает Безумием&nbsp; &nbsp; &nbsp;' |
+						exMarks
+					}}
+				</span>
+			</p>
+		</ng-template>
+
+		<ng-template #footer>
+			<p>
+				Через CLI пайп можно создать командой
+				<span class="text-primary font-monospace">
+					ng g p --skip-tests component-name
+				</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>

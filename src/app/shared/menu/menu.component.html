@@ -1,0 +1,15 @@
+<nav>
+	<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 gx-3 gy-5">
+		<li
+			*ngFor="let i of [].constructor(menuLength); let idx = index"
+			class="col"
+		>
+			<a
+				[href]="'#part'+(idx + 2)" class="h5 fw-normal link-dark"
+				(click)="closeMenu()"
+			>
+				Часть {{idx + 2}}
+			</a>
+		</li>
+	</ul>
+</nav>

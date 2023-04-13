@@ -1,0 +1,43 @@
+<div
+	class="card shadow-sm"
+	[ngClass]="cardClass"
+>
+	<div
+		class="card-header"
+		[ngClass]="{'d-flex': cardIcon, cardHeaderClass}"
+		*ngIf="cardHeader"
+	>
+		<h2 class="h2">
+			<ng-container
+				[ngTemplateOutlet]="cardHeader"
+				[ngTemplateOutletContext]="{$implicit: templateContext}"
+			></ng-container>
+		</h2>
+
+		<ng-container
+			*ngIf="cardIcon"
+			[ngTemplateOutlet]="cardIcon"
+			[ngTemplateOutletContext]="{$implicit: templateContext}"
+		>
+		</ng-container>
+	</div>
+
+	<div
+		class="card-body"
+		*ngIf="cardBody"
+	>
+		<ng-container
+			[ngTemplateOutlet]="cardBody"
+			[ngTemplateOutletContext]="{$implicit: templateContext}"
+		></ng-container>
+	</div>
+	<div
+		class="card-footer"
+		*ngIf="cardFooter"
+	>
+		<ng-container
+			[ngTemplateOutlet]="cardFooter"
+			[ngTemplateOutletContext]="{$implicit: templateContext}"
+		></ng-container>
+	</div>
+</div>

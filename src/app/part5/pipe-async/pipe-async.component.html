@@ -1,0 +1,53 @@
+<div class="container">
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			Пайп async
+		</ng-template>
+		<ng-template #body>
+			<p class="font-monospace text-danger mb-1">
+				async обрабатывает promise
+			</p>
+			<p>
+				{{ '{{ ' }}prom }}:
+				<span class="text-primary font-monospace">
+					{{ prom }}
+				</span>
+			</p>
+			<p>
+				Появляется через 4 секунды
+				{{ '{{ ' }}prom | async }}:
+				<span class="text-primary font-monospace">
+					{{ prom | async }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				async обрабатывает observable
+			</p>
+			<p>
+				{{ '{{ ' }}date$ }}:
+				<span class="text-primary font-monospace">
+					{{ date$ }}
+				</span>
+			</p>
+			<p>
+				Появляется через 1 секунду и обновляется каждую секунду {{ '{{ ' }}date$ | async }}:
+				<span class="text-primary font-monospace">
+					{{ date$ | async }}
+				</span>
+			</p>
+
+			<p class="font-monospace text-danger mb-1">
+				без async
+			</p>
+			<p>
+				{{ '{{ ' }}date }}:
+				<span class="text-primary font-monospace">
+					{{ date }}
+				</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>

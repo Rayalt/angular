@@ -1,0 +1,292 @@
+<div class="container">
+	<h2 class="h2 mb-4">
+		Директивы
+	</h2>
+
+	<div class="d-flex mb-3">
+		<h2 class="h2">Переключить фон [ngStyle], [ngClass]:</h2>
+		<button class="btn btn-dark m-2 mb-0 mt-0" (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+	</div>
+
+	<div class="row row-cols-1 row-cols-md-2 g-3 mb-5">
+
+		<!------------ngStyle------------>
+
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #header>
+					[ngStyle]
+				</ng-template>
+				<ng-template #body>
+					<div [ngStyle]="{
+						width: '200px',
+						height: '200px',
+						backgroundColor: backgroundToggle ? '#1d1d1d' : '#ccc',
+						borderRadius: '12px'
+					}"
+					></div>
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Смена свойства background по переменной backgroundToggle через [ngStyle]:
+						<span class="d-block text-primary font-monospace">
+							backgroundColor: backgroundToggle ? '#1d1d1d' : '#ccc'
+						</span>
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+
+
+		<!------------ngClass------------>
+
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #header>
+					[ngClass]
+				</ng-template>
+				<ng-template #body>
+					<p
+						class="bg-opacity-50 rounded p-3"
+						[ngClass]="{
+							'bg-danger': backgroundToggle,
+							'bg-info': !backgroundToggle
+						}"
+					>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Blanditiis eum maiores tempora.
+					</p>
+
+					<p
+						class="bg-opacity-50 rounded p-3"
+						[class.bg-success]="!backgroundToggle"
+						[class.bg-warning]="backgroundToggle"
+					>
+						Aspernatur at beatae eaque facere fuga iste magnam
+						necessitatibus nostrum quam velit?
+					</p>
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Смена фона по переменной backgroundToggle через [ngClass]:
+						<span class="d-block text-primary font-monospace">
+							[ngClass]="{{ '{' }}
+							'bg-danger': backgroundToggle,
+								'bg-info': !backgroundToggle
+							}"
+						</span>
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+	</div>
+
+
+	<!------------*ngIf------------>
+
+	<div class="d-flex mb-3">
+		<h2 class="h2">Переключить параграф *ngIf:</h2>
+		<button class="btn btn-dark m-2 mb-0 mt-0" (click)="toggle = !toggle">Toggle</button>
+	</div>
+
+
+	<div class="row row-cols-1 row-cols-md-2 g-3 mb-5">
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #header>
+					*ngIf="var"
+				</ng-template>
+				<ng-template #body>
+					<p *ngIf="toggle" class="bg-opacity-50 rounded bg-danger p-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, ullam?
+					</p>
+
+					<p *ngIf="!toggle" class="bg-opacity-50 rounded bg-info p-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, tempora?
+					</p>
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Удаление и добавление параграфов по переменной toggle через *ngIf="var":
+						<span class="d-block text-primary font-monospace">
+							{{ '<' }}p *ngIf="toggle">...{{ '<' }}/p>
+						</span>
+						<span class="d-block text-primary font-monospace">
+							{{ '<' }}p *ngIf="!toggle">...{{ '<' }}/p>
+						</span>
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #header>
+					*ngIf="var"; else ng-template
+				</ng-template>
+				<ng-template #body>
+					<p *ngIf="toggle; else blueP" class="bg-opacity-50 rounded bg-danger p-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, maxime.
+					</p>
+
+					<ng-template
+						#blueP
+					>
+						<p class="bg-opacity-50 rounded bg-info p-3">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, neque?
+						</p>
+					</ng-template>
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Удаление и добавление параграфов по переменной
+						toggle через *ngIf="var; else template":
+						<span class="d-block text-primary font-monospace">
+							{{ '<' }}p *ngIf="toggle; else blueP">...{{ '<' }}/p>
+						</span>
+						<span class="d-block text-primary font-monospace">
+							{{ '<' }}ng-template #blueP>{{ '<' }}p>...{{ '<' }}/p> {{ '<' }}/ng-template>
+						</span>
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+	</div>
+
+
+	<!------------ngSwitch------------>
+
+	<div class="d-flex mb-3">
+		<h2 class="h2">Переключить параграф [ngSwitch]:</h2>
+		<div class="btn-group m-2 mb-0 mt-0">
+			<button class="btn btn-dark" (click)="toggle2 = !toggle2">Toggle</button>
+			<button class="btn btn-secondary" (click)="toggle2 = 111">Set 111</button>
+		</div>
+	</div>
+
+	<app-shared-card
+		cardClass="h-100 mb-5"
+	>
+		<ng-template #header>
+			[ngSwitch]
+		</ng-template>
+		<ng-template #body>
+			<div [ngSwitch]="toggle2">
+				<p *ngSwitchCase="true" class="bg-danger bg-opacity-50 rounded p-3">
+					Lorem ipsum.
+				</p>
+				<p *ngSwitchCase="false" class="bg-info bg-opacity-50 rounded p-3">
+					Lorem ipsum dolor sit.
+				</p>
+				<p *ngSwitchDefault class="bg-warning bg-opacity-50 rounded p-3">
+					Lorem ipsum dolor sit amet.
+				</p>
+			</div>
+		</ng-template>
+		<ng-template #footer>
+			<p class="card-text">
+				Удаление и добавление параграфов по переменной
+				toggle через [ngSwitch]:
+				<span class="d-block text-danger font-monospace">
+					{{ '<' }}*ngSwitchCase="true">...{{ '<' }}/p>
+				</span>
+				<span class="d-block text-info font-monospace">
+					{{ '<' }}*ngSwitchCase="false">...{{ '<' }}/p>
+				</span>
+				<span class="d-block text-warning font-monospace">
+					{{ '<' }}*ngSwitchDefault>...{{ '<' }}/p>
+				</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+
+	<!------------ngFor------------>
+
+	<h2 class="h2 mb-3">Циклы *ngFor</h2>
+
+	<div class="row row-cols-1 row-cols-md-2 g-3">
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #header>
+					*ngFor
+				</ng-template>
+				<ng-template #body>
+					<ul>
+						<li *ngFor="let number of arr2; let idx = index">
+							{{ idx }}:
+							<strong>
+								{{ number }}
+							</strong>
+						</li>
+					</ul>
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Вывод индекса и элемента массива через *ngFor:
+						<span class="d-block text-primary font-monospace">
+							*ngFor="let number of arr2; let idx = index"
+						</span>
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+
+		<div class="col">
+			<app-shared-card
+				cardClass="h-100"
+			>
+				<ng-template #header>
+					*ngFor
+				</ng-template>
+				<ng-template #body>
+					<ul>
+						<li *ngFor="let post of objNews">
+							<h2 class="h4">
+								{{ post.title }}
+							</h2>
+							<p>
+								Author:
+								{{ post.author }}
+							</p>
+
+							<h3 class="h5">
+								Comments
+							</h3>
+
+							<ul>
+								<li *ngFor="let comment of post.comments">
+									<h4 class="h6">
+										Author:
+										{{ comment.name }}
+									</h4>
+									<p>
+										Comment:
+										{{ comment.text }}
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</ng-template>
+				<ng-template #footer>
+					<p class="card-text">
+						Вывод текста из объекта через *ngFor:
+						<span class="d-block text-primary font-monospace">
+							*ngFor="let post of objNews"
+						</span>
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+	</div>
+</div>

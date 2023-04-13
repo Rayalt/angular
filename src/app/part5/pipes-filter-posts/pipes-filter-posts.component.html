@@ -1,0 +1,64 @@
+<div class="container">
+	<h2 class="h2 mb-3">
+		Пайп для фильтрации постов
+	</h2>
+
+	<button
+		class="btn btn-dark mb-3"
+		(click)="addNewPost()"
+	>
+		Добавить новый пост
+	</button>
+
+	<div class="input-group mb-3">
+		<input
+			type="text"
+			class="form-control"
+			placeholder="Поиск по"
+			aria-label="Поиск по"
+			aria-describedby="addon"
+			[(ngModel)]="search"
+		>
+		<button
+			class="btn btn-outline-secondary"
+			(click)="searchParameter = 'title'"
+		>
+			заголовку
+		</button>
+		<button
+			class="btn btn-outline-secondary"
+			(click)="searchParameter = 'text'"
+		>
+			тексту
+		</button>
+		<button
+			class="btn btn-outline-secondary"
+			(click)="searchParameter = 'tags'"
+		>
+			тегам
+		</button>
+	</div>
+
+	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+		<div
+			class="col"
+			*ngFor="let item of allPost | filter:search:searchParameter"
+		>
+			<app-shared-card cardClass="mb-3 h-100">
+				<ng-template #header>
+					{{ item.title }}
+				</ng-template>
+
+				<ng-template #body>
+					{{ item.text }}
+				</ng-template>
+
+				<ng-template #footer>
+					<p class="card-text">
+						{{ item.tags }}
+					</p>
+				</ng-template>
+			</app-shared-card>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="mb-3">
+	<label class="form-label" for="postTitle">
+		Заголовок поста
+	</label>
+	<input
+		type="text"
+		class="form-control"
+		placeholder="Введите текст"
+		aria-label="Введите текст"
+		id="postTitle"
+		[(ngModel)]="addedTitle"
+		#titleInput
+	>
+</div>
+
+<div class="mb-3">
+	<label for="postText" class="form-label">
+		Текст поста
+	</label>
+	<textarea
+		class="form-control"
+		id="postText"
+		[(ngModel)]="addedText"
+	></textarea>
+</div>
+
+<button
+	class="btn btn-dark m-2 my-0"
+	(click)="addPost()"
+>
+	Добавить пост
+</button>
+
+<button
+	class="btn btn-light"
+	(click)="focusTitle()"
+>
+	Фокус для поля заголовка
+</button>

@@ -1,0 +1,21 @@
+<div class="container">
+	<app-shared-card
+		cardClass="bg-info bg-opacity-50"
+	>
+		<ng-template #header>
+			Вывод и форматирование даты через пайпы
+		</ng-template>
+
+		<ng-template #body>
+			<p>
+				{{now | date: 'long' | uppercase | lowercase}}
+			</p>
+		</ng-template>
+
+		<ng-template #footer>
+			<p class="text-primary font-monospace">
+				{{'{{'}}now | date: 'long' | uppercase | lowercase}}
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>

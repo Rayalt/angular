@@ -1,0 +1,60 @@
+<div class="container">
+	<app-shared-card
+		cardClass="bg-info bg-opacity-50"
+	>
+		<ng-template #header>
+			Two way binding
+		</ng-template>
+		<ng-template #body>
+			<div class="row row-cols-1 row-cols-md-2">
+				<!--Длинный вариант-->
+				<div class="col">
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Введите текст"
+						aria-label="Введите текст"
+						aria-describedby="addon"
+						(input)="onInput3($event)"
+						[value]="inputTitle"
+						id="eventInput"
+					>
+					<label class="form-label mt-2 mb-0" for="eventInput">
+						Длинный вариант two way binding:
+						<span class="d-block text-primary font-monospace">
+							(input)="onInput3($event)" [value]="inputTitle"
+						</span>
+					</label>
+				</div>
+
+				<!--Более короткий вариант-->
+				<div class="col">
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Введите текст"
+						aria-label="Введите текст"
+						aria-describedby="addon"
+						[(ngModel)]="inputTitle"
+						id="eventNgModel"
+					>
+					<label class="form-label mt-2 mb-0" for="eventNgModel">
+						Короткий вариант two way binding:
+						<span class="d-block text-primary font-monospace">
+							[(ngModel)]="inputTitle"
+						</span>
+					</label>
+				</div>
+			</div>
+		</ng-template>
+
+		<ng-template #footer>
+			<p>
+				Результат ввода:
+				<strong>
+					{{inputTitle}}
+				</strong>
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>

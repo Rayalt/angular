@@ -1,0 +1,68 @@
+<div class="container">
+	<h2 class="h2 mb-3">
+		Создание сервисов
+	</h2>
+
+	<p>
+		Через CLI сервис можно создать командой
+		<span class="text-primary font-monospace">
+			ng g s --skip-tests component-name
+		</span>
+	</p>
+
+	<app-shared-card
+		cardClass="mb-3"
+	>
+		<ng-template #header>
+			{{ '{{ ' }}appCounterService }}: {{ appCounterService.counter }}
+		</ng-template>
+		<ng-template #body>
+			<div class="btn-group">
+				<button
+					(click)="appCounterService.increase()"
+					class="btn btn-dark"
+				>
+					+
+				</button>
+				<button
+					(click)="appCounterService.decrease()"
+					class="btn btn-secondary"
+				>
+					-
+				</button>
+			</div>
+		</ng-template>
+		<ng-template #footer>
+			<p>
+				Работает в глобальной области видимости в app.component
+			</p>
+		</ng-template>
+	</app-shared-card>
+
+	<app-shared-card>
+		<ng-template #header>
+			{{ '{{ ' }}counterLocalService }}: {{ counterLocalService.counter }}
+		</ng-template>
+		<ng-template #body>
+			<div class="btn-group">
+				<button
+					(click)="counterLocalService.increase()"
+					class="btn btn-dark"
+				>
+					+
+				</button>
+				<button
+					(click)="counterLocalService.decrease()"
+					class="btn btn-secondary"
+				>
+					-
+				</button>
+			</div>
+		</ng-template>
+		<ng-template #footer>
+			<p>
+				Работает только в локальной области видимости в service-create.component
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>

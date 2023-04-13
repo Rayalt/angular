@@ -1,0 +1,25 @@
+<app-shared-card>
+	<ng-template #header>
+		Создание своей [ngModel]
+	</ng-template>
+
+	<ng-template #body>
+		<div class="d-flex">
+			<button
+				class="btn"
+				(click)="setState('on')"
+				[ngClass]="state === 'off' ? 'btn-secondary' : 'btn-info'"
+			>
+				on
+			</button>
+
+			<button
+				class="btn mx-2"
+				(click)="setState('off')"
+				[ngClass]="state === 'off' ? 'btn-info' : 'btn-secondary'"
+			>
+				off
+			</button>
+		</div>
+	</ng-template>
+</app-shared-card>

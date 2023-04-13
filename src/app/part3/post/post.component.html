@@ -1,0 +1,28 @@
+<app-shared-card
+	cardClass="h-100"
+	cardHeaderClass="justify-content-between"
+>
+	<ng-template #header>
+		{{onePost.title}}
+	</ng-template>
+
+	<ng-template #icon>
+		<button
+			type="button"
+			class="btn-close m-2 flex-shrink-0"
+			aria-label="Close"
+			(click)="deletePost()"
+		></button>
+	</ng-template>
+
+	<ng-template #body>
+		<p class="card-text">
+			{{onePost.text}}
+		</p>
+	</ng-template>
+
+	<ng-template #footer>
+		<ng-content></ng-content>
+	</ng-template>
+</app-shared-card>
+

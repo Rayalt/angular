@@ -1,0 +1,66 @@
+<div class="container">
+	<app-shared-card
+		cardClass="bg-info bg-opacity-50"
+	>
+		<ng-template #header>
+			Интерполяция
+		</ng-template>
+		<ng-template #body>
+			<p>
+				<strong>
+					{{'{{'}}title}}:
+				</strong>
+				<span class="text-primary font-monospace">
+					{{title}}
+				</span>
+			</p>
+
+			<p>
+				<strong>
+					{{'{{'}}number}}:
+				</strong>
+				<span class="text-primary font-monospace">
+					{{number}}
+				</span>
+			</p>
+
+			<p>
+				<strong>
+					{{'{{'}}number - 2}}:
+				</strong>
+				<span class="text-primary font-monospace">
+					{{number - 2}}
+				</span>
+			</p>
+
+			<p>
+				<strong>
+					{{'{{'}}arr}}:
+				</strong>
+				<span class="text-primary font-monospace">
+					{{arr}}
+				</span>
+			</p>
+
+			<p>
+				<strong>
+					{{'{{'}}obj}}:
+				</strong>
+				<span class="text-primary font-monospace">
+					{{obj}}
+				</span>
+			</p>
+
+			<p>
+				<strong>
+					obj.a:
+				</strong>
+				<span class="text-primary font-monospace">{{obj.a}}</span>,
+				<strong>
+					obj.b.c:
+				</strong>
+				<span class="text-primary font-monospace">{{obj.b.c}}</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>

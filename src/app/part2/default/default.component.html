@@ -1,0 +1,32 @@
+<div class="container">
+	<app-shared-card>
+		<ng-template #header>
+			Компонент default
+		</ng-template>
+
+		<ng-template #body>
+			<p>Пример вывода стандартного компонента angular, состоящего из:</p>
+			<p class="text-primary font-monospace">
+				default.component.html + default.component.scss + default.component.ts
+			</p>
+		</ng-template>
+
+		<ng-template #footer>
+			<p>
+				Через CLI компонент можно создать командой
+				<span class="text-primary font-monospace">
+					ng g c --skip-tests component-name
+				</span>
+			</p>
+			<p>
+				Флаги:
+				<span class="d-block text-primary font-monospace">
+					-s for inline css, preventing style file creation
+					--flat to prevent folder creation
+					-t for inline template, preventing html file creation
+					--skip-Tests to prevent .spec file creation
+				</span>
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>
