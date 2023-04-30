@@ -19,20 +19,20 @@
 	transition: transform .25s ease;
 	width: 288px;
 
-	.open-nav & {
-		box-shadow: #ced0d6;
-		transform: translateX(0);
-	}
-
 	@media (min-width: 768px) {
 		width: 600px;
 		transform: translateX(-600px);
-		height: 50%;
 	}
 
 	@media (min-width: 992px) {
 		width: 800px;
 		transform: translateX(-800px);
+		height: 50%;
+	}
+
+	.open-nav & {
+		box-shadow: #ced0d6;
+		transform: translateX(0);
 	}
 }
 

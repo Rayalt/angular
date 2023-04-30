@@ -1,0 +1,22 @@
+<section class="py-5">
+	<div class="container">
+		<app-shared-card
+			cardBodyClass="d-flex flex-column justify-content-center"
+		>
+			<ng-template #header>
+				Вложенные страницы
+			</ng-template>
+			<ng-template #body>
+				<p class="mb-2">
+					Мы вынуждены отталкиваться от того, что понимание сути ресурсосберегающих
+					технологий играет важную роль в формировании благоприятных перспектив.
+				</p>
+				<a [routerLink]="['/part9b', 'nested']" class="link align-self-start">
+					Показать полностью
+				</a>
+
+				<router-outlet></router-outlet>
+			</ng-template>
+		</app-shared-card>
+	</div>
+</section>

@@ -4,10 +4,13 @@
 >
 	<div
 		class="card-header"
-		[ngClass]="{'d-flex': cardIcon, cardHeaderClass}"
+		[ngClass]="{'d-flex flex-sm-row flex-column': cardIcon}"
 		*ngIf="cardHeader"
 	>
-		<h2 class="h2">
+		<h2
+			class="h2"
+			[ngClass]="cardTitleClass"
+		>
 			<ng-container
 				[ngTemplateOutlet]="cardHeader"
 				[ngTemplateOutletContext]="{$implicit: templateContext}"
@@ -25,6 +28,7 @@
 	<div
 		class="card-body"
 		*ngIf="cardBody"
+		[ngClass]="cardBodyClass"
 	>
 		<ng-container
 			[ngTemplateOutlet]="cardBody"

@@ -1,7 +1,12 @@
 <!------------------Part2------------------>
 
-<header class="d-flex justify-content-between p-4 position-sticky top-0 z-20">
-	<a href="#" class="btn btn-lg btn-outline-dark">
+<header class="d-flex justify-content-between bg-white shadow-lg p-4 position-sticky top-0 z-20">
+	<a
+		[routerLink]="['/part2']"
+		[routerLinkActive]="'btn-dark text-light'"
+		[routerLinkActiveOptions]="{exact: true}"
+		class="h5 fw-normal btn-lg btn btn-outline-dark mb-0"
+	>
 		В начало
 	</a>
 
@@ -12,172 +17,14 @@
 
 <div class="nav bg-light">
 	<div class="nav__inner">
-		<app-menu></app-menu>
+		<app-shared-menu
+			class="d-flex flex-column h-100 justify-content-between"
+		></app-shared-menu>
 	</div>
 </div>
+
+<!--<app-shared-menu-prime></app-shared-menu-prime>-->
 
 <div #pageDarker (click)="closeMenu()" class="darker"></div>
 
-<div class="bg-info bg-gradient p-4 position-sticky top-0 z-10">
-	<h2 class="h2 text-center">
-		Часть 2. Основы и синтаксис
-	</h2>
-</div>
-
-<!--Интерполяция, динамические переменные-->
-<section id="part2" class="py-5">
-	<app-part2-interpolation></app-part2-interpolation>
-</section>
-
-<!--Компоненты-->
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part2-default></app-part2-default>
-</section>
-
-<!--Компонент без html-->
-<section class="py-5">
-	<app-part2-only-ts></app-part2-only-ts>
-</section>
-
-<!--one way data binding-->
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part2-one-way-binding></app-part2-one-way-binding>
-</section>
-
-<!--two way data binding-->
-<section class="py-5">
-	<app-part2-two-way-binding></app-part2-two-way-binding>
-</section>
-
-<!--Директивы-->
-
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part2-directives></app-part2-directives>
-</section>
-
-
-<!--Пайпы-->
-<section class="py-5">
-	<app-part2-pipes></app-part2-pipes>
-</section>
-
-
-<!------------------Part3------------------>
-
-<div class="bg-secondary bg-gradient p-4 position-sticky top-0 z-10">
-	<h2 class="h2 text-center">
-		Часть 3. Компоненты подробно
-	</h2>
-</div>
-
-<section id="part3" class="bg-opacity-25 bg-secondary py-5">
-	<app-part3-post-container></app-part3-post-container>
-</section>
-
-
-<!------------------Part4------------------>
-
-<div class="bg-info bg-gradient p-4 position-sticky top-0 z-10">
-	<h2 class="h2 text-center">
-		Часть 4. Директивы
-	</h2>
-</div>
-
-<section id="part4" class="py-5">
-	<div class="container d-grid gap-3">
-		<div
-			class="card shadow-sm p-4"
-			appPart4Style="#198754"
-			fontWeight="bold"
-			[dStyles]="{
-				border: '1px solid #198754',
-				borderRadius: '8px',
-				background: '#0dcaf03f'
-			}"
-		>
-			<app-part4-directives-content></app-part4-directives-content>
-		</div>
-		<div
-			class="card shadow-sm p-4"
-			appPart4Style="#dc3545"
-			fontWeight="bold"
-			[dStyles]="{
-				border: '1px solid #dc3545',
-				borderRadius: '8px',
-				background: '#0dcaf03f'
-			}"
-		>
-			<app-part4-directives-content></app-part4-directives-content>
-		</div>
-	</div>
-</section>
-
-<!--Создание структурной директивы-->
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part4-directive-structure></app-part4-directive-structure>
-</section>
-
-
-<!------------------Part5------------------>
-
-<div class="bg-secondary bg-gradient p-4 position-sticky top-0 z-10">
-	<h2 class="h2 text-center">
-		Часть 5. Пайпы подробно
-	</h2>
-</div>
-
-<!--Примеры пайпов-->
-<section id="part5" class="py-5">
-	<app-part5-pipes-details></app-part5-pipes-details>
-</section>
-
-<!--Создание своих пайпов-->
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part5-pipes-create></app-part5-pipes-create>
-</section>
-
-<!--Фильтрация постов-->
-<section class="py-5">
-	<app-part5-pipes-filter-posts></app-part5-pipes-filter-posts>
-</section>
-
-<!--async-->
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part5-pipe-async></app-part5-pipe-async>
-</section>
-
-
-<!------------------Part6------------------>
-
-<div class="bg-info bg-gradient p-4 position-sticky top-0 z-10">
-	<h2 class="h2 text-center">
-		Часть 6. Сервисы
-	</h2>
-</div>
-
-<!--Создание сервиса-->
-<section id="part6" class="py-5">
-	<app-par6-service-create></app-par6-service-create>
-</section>
-
-<!--Область видимости сервисов-->
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part6-counter></app-part6-counter>
-</section>
-
-
-<!------------------Part6------------------>
-
-<div class="bg-secondary bg-gradient p-4 position-sticky top-0 z-10">
-	<h2 class="h2 text-center">
-		Часть 7. Формы и валидация
-	</h2>
-</div>
-
-<section id="part7" class="py-5">
-	<app-part7-form></app-part7-form>
-</section>
-
-<section class="bg-opacity-25 bg-secondary py-5">
-	<app-part7-own-ng-model></app-part7-own-ng-model>
-</section>
+<router-outlet></router-outlet>

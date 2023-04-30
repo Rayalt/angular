@@ -1,0 +1,31 @@
+<section class="bg-opacity-25 bg-secondary py-5">
+	<div class="container">
+		<app-shared-card
+			cardBodyClass="d-flex flex-column justify-content-center"
+			cardTitleClass="flex-grow-1 mb-0"
+		>
+			<ng-template #header>
+				{{post2?.title}}
+			</ng-template>
+
+			<ng-template #icon>
+				<button class="btn btn-dark mb-auto" [routerLink]="['/part9']">
+					Назад
+				</button>
+			</ng-template>
+
+			<ng-template #body>
+				{{post2?.text}}
+			</ng-template>
+
+			<ng-template #footer>
+				<button
+					class="btn btn-secondary"
+					(click)="loadLastPost()"
+				>
+					Загрузить последний пост
+				</button>
+			</ng-template>
+		</app-shared-card>
+	</div>
+</section>

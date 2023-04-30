@@ -7,7 +7,8 @@ import {Component, ContentChild, Input, OnInit, TemplateRef} from '@angular/core
 export class CardComponent implements OnInit {
 
 	@Input() cardClass: string = '';
-	@Input() cardHeaderClass: string = '';
+	@Input() cardTitleClass: string = '';
+	@Input() cardBodyClass: string = '';
 
 	@ContentChild('body') cardBody: TemplateRef<any> | undefined;
 	@ContentChild('header') cardHeader: TemplateRef<any> | undefined;

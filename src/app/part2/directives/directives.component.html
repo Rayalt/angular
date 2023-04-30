@@ -3,9 +3,9 @@
 		Директивы
 	</h2>
 
-	<div class="d-flex mb-3">
+	<div class="d-flex flex-md-row flex-column align-items-start justify-content-between mb-3">
 		<h2 class="h2">Переключить фон [ngStyle], [ngClass]:</h2>
-		<button class="btn btn-dark m-2 mb-0 mt-0" (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+		<button class="btn btn-dark flex-shrink-0 m-2 mb-0 mt-0" (click)="backgroundToggle = !backgroundToggle">Toggle</button>
 	</div>
 
 	<div class="row row-cols-1 row-cols-md-2 g-3 mb-5">
@@ -88,9 +88,9 @@
 
 	<!------------*ngIf------------>
 
-	<div class="d-flex mb-3">
+	<div class="d-flex flex-md-row flex-column align-items-start justify-content-between mb-3">
 		<h2 class="h2">Переключить параграф *ngIf:</h2>
-		<button class="btn btn-dark m-2 mb-0 mt-0" (click)="toggle = !toggle">Toggle</button>
+		<button class="btn btn-dark flex-shrink-0 m-2 mb-0 mt-0" (click)="toggle = !toggle">Toggle</button>
 	</div>
 
 
@@ -163,9 +163,9 @@
 
 	<!------------ngSwitch------------>
 
-	<div class="d-flex mb-3">
+	<div class="d-flex flex-md-row flex-column align-items-start justify-content-between mb-3">
 		<h2 class="h2">Переключить параграф [ngSwitch]:</h2>
-		<div class="btn-group m-2 mb-0 mt-0">
+		<div class="btn-group flex-shrink-0 m-2 mb-0 mt-0">
 			<button class="btn btn-dark" (click)="toggle2 = !toggle2">Toggle</button>
 			<button class="btn btn-secondary" (click)="toggle2 = 111">Set 111</button>
 		</div>

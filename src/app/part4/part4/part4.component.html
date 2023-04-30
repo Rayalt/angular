@@ -1,0 +1,37 @@
+<app-shared-header-section>
+	Часть 4. {{menuItemCollection.Part4}}
+</app-shared-header-section>
+
+<section id="part4" class="py-5">
+	<div class="container d-grid gap-3">
+		<div
+			class="card shadow-sm p-4"
+			appPart4Style="#198754"
+			fontWeight="bold"
+			[dStyles]="{
+				border: '1px solid #198754',
+				borderRadius: '8px',
+				background: '#0dcaf03f'
+			}"
+		>
+			<app-part4-directives-content></app-part4-directives-content>
+		</div>
+		<div
+			class="card shadow-sm p-4"
+			appPart4Style="#dc3545"
+			fontWeight="bold"
+			[dStyles]="{
+				border: '1px solid #dc3545',
+				borderRadius: '8px',
+				background: '#0dcaf03f'
+			}"
+		>
+			<app-part4-directives-content></app-part4-directives-content>
+		</div>
+	</div>
+</section>
+
+<!--Создание структурной директивы-->
+<section class="bg-opacity-25 bg-secondary py-5">
+	<app-part4-directive-structure></app-part4-directive-structure>
+</section>

@@ -1,0 +1,62 @@
+<div class="container">
+	<h2 class="h2 mb-3">Динамические роуты</h2>
+
+	<app-shared-card
+		cardBodyClass="d-flex flex-column justify-content-center"
+		cardTitleClass="mb-0 flex-grow-1"
+	>
+		<ng-template #header>
+			Страница постов
+		</ng-template>
+		<ng-template #icon>
+			<div class="btn-group flex-shrink-0 m-sm-2 mb-0 mt-sm-0 mt-2">
+				<button
+					class="btn btn-dark"
+					[routerLink]="['/part9']"
+					[queryParams]="{
+						showIds: true
+					}"
+					[fragment]="'fragment'"
+				>
+					Показать IDS
+				</button>
+				<button
+					class="btn btn-secondary"
+					(click)="showIdsProgram()"
+				>
+					Показать IDS (program)
+				</button>
+			</div>
+		</ng-template>
+		<ng-template #body>
+			<div
+				class="card shadow-sm"
+				[ngClass]="{
+					'mt-4': idx !== 0
+				}"
+				*ngFor="let onePost of postsService.allPosts; let idx = index"
+			>
+				<div class="card-header">
+					<h2 class="h2">
+						{{onePost.title}}
+					</h2>
+				</div>
+
+				<div class="card-body">
+					<p class="text-truncate mb-2">
+						{{onePost.text}}
+					</p>
+					<a class="link" [routerLink]="['/part9', onePost.id]">
+						Читать далее
+					</a>
+				</div>
+				<div
+					class="card-footer"
+					*ngIf="showIds === true"
+				>
+					{{onePost.id}}
+				</div>
+			</div>
+		</ng-template>
+	</app-shared-card>
+</div>

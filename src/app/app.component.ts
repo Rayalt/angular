@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
+import { menuItemCollection } from './shared/menu/menu-items.enum';
 
 @Component({
 	selector: 'app-root',
@@ -10,9 +12,15 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 export class AppComponent implements OnInit {
 
 	pageBody: any;
+	menuItemCollection = menuItemCollection;
+
+	constructor(
+		private primengConfig: PrimeNGConfig,
+	) {}
 
 	ngOnInit() {
 		this.pageBody = document.body;
+		this.primengConfig.ripple = true;
 	}
 
 	openMenu() {

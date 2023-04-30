@@ -1,0 +1,28 @@
+<section class="py-5">
+	<div class="container">
+		<app-shared-card
+			cardBodyClass="d-flex flex-column justify-content-center"
+		>
+			<ng-template #header>
+				Войдите, чтобы просматривать посты
+			</ng-template>
+			<ng-template #body>
+				<div class="d-flex mb-3">
+					<button
+						class="btn btn-lg btn-dark"
+						(click)="auth.login()"
+					>
+						Войти
+					</button>
+					<button
+						class="btn btn-lg btn-secondary mx-2"
+						(click)="auth.logout()"
+					>
+						Выйти
+					</button>
+				</div>
+				<a routerLink="/part2" class="link">Вернуться на главную</a>
+			</ng-template>
+		</app-shared-card>
+	</div>
+</section>

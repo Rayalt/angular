@@ -1,15 +1,54 @@
 <nav>
-	<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 gx-3 gy-5">
+	<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-3 gy-3">
 		<li
-			*ngFor="let i of [].constructor(menuLength); let idx = index"
+			*ngFor="let item of menuItemCollection | keyvalue"
 			class="col"
 		>
 			<a
-				[href]="'#part'+(idx + 2)" class="h5 fw-normal link-dark"
+				[routerLink]="['/part'+(item.key | slice:4)]"
+				[routerLinkActive]="'btn-outline-info'"
+				[routerLinkActiveOptions]="{exact: true}"
+				class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
 				(click)="closeMenu()"
 			>
-				Часть {{idx + 2}}
+				<span class="text-black">Часть {{item.key | slice:4}}.</span>
+				<br>
+				{{item.value}}
+			</a>
+		</li>
+	</ul>
+
+	<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-3 gy-3 border-top mt-3">
+		<li
+			*ngFor="let item of menuItemSeparateCollection | keyvalue"
+			class="col"
+		>
+			<a
+				[routerLink]="['/part'+(item.key | slice:4)]"
+				[routerLinkActive]="'btn-outline-info'"
+				[routerLinkActiveOptions]="{exact: true}"
+				class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
+				(click)="closeMenu()"
+			>
+				<span class="text-black">Часть {{item.key | slice:4}}.</span>
+				<br>
+				{{item.value}}
 			</a>
 		</li>
 	</ul>
 </nav>
+
+<div class="d-flex mt-3 justify-content-end">
+	<button
+		class="btn btn-lg btn-dark mx-2"
+		(click)="auth.login()"
+	>
+		Войти
+	</button>
+	<button
+		class="btn btn-lg btn-secondary"
+		(click)="auth.logout()"
+	>
+		Выйти
+	</button>
+</div>

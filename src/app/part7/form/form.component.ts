@@ -92,8 +92,7 @@ export class FormComponent implements OnInit {
 	}
 
 	deleteInput() {
-		console.log(this.skillInput.nativeElement)
+		console.log(this.skillInput.nativeElement);
 		// this.skillInput.nativeElement.remove();
-
 	}
 }
