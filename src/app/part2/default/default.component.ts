@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'; // импорт декоратора Component
+import { Component } from '@angular/core'; // импорт декоратора Component
 
 @Component({
 	selector: 'app-part2-default',

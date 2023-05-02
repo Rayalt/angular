@@ -5,13 +5,13 @@
 			class="col"
 		>
 			<a
-				[routerLink]="['/part'+(item.key | slice:4)]"
+				[routerLink]="['/part'+(item.key | slice:6)]"
 				[routerLinkActive]="'btn-outline-info'"
 				[routerLinkActiveOptions]="{exact: true}"
 				class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
 				(click)="closeMenu()"
 			>
-				<span class="text-black">Часть {{item.key | slice:4}}.</span>
+				<span class="text-black">Часть {{item.key | slice:6}}.</span>
 				<br>
 				{{item.value}}
 			</a>
@@ -24,13 +24,13 @@
 			class="col"
 		>
 			<a
-				[routerLink]="['/part'+(item.key | slice:4)]"
+				[routerLink]="['/part'+(item.key | slice:6)]"
 				[routerLinkActive]="'btn-outline-info'"
 				[routerLinkActiveOptions]="{exact: true}"
 				class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
 				(click)="closeMenu()"
 			>
-				<span class="text-black">Часть {{item.key | slice:4}}.</span>
+				<span class="text-black">Часть {{item.key | slice:6}}.</span>
 				<br>
 				{{item.value}}
 			</a>
@@ -38,7 +38,7 @@
 	</ul>
 </nav>
 
-<div class="d-flex mt-3 justify-content-end">
+<div class="d-flex justify-content-end border-top mt-3 pt-3">
 	<button
 		class="btn btn-lg btn-dark mx-2"
 		(click)="auth.login()"

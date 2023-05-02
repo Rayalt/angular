@@ -1,0 +1,37 @@
+<section class="py-5">
+	<div class="container">
+		<app-shared-card
+			cardBodyClass="d-flex flex-column justify-content-center"
+		>
+			<ng-template #header>
+				{{'Тяжёлое машиностроение — это вам не глас грядущего поколения' | pageName}}
+			</ng-template>
+			<ng-template #body>
+				<button class="btn btn-outline-info align-self-start mb-2" (click)="read = true">
+					Отметить как прочитанное
+				</button>
+				<p
+					class="mb-2"
+					[ngClass]="{
+						'text-info': !!read
+					}"
+				>
+					Современные технологии достигли такого уровня, что высокое качество позиционных
+					исследований является качественно новой ступенью как самодостаточных,
+					так и внешне зависимых концептуальных решений.
+				</p>
+
+				<div class="btn-group flex-shrink-0 m-2 mx-0">
+					<a class="btn btn-dark" [routerLink]="['/part10b', 'nested2']">
+						Показать полностью
+					</a>
+					<a class="btn btn-secondary" [routerLink]="['/part10b']">
+						Скрыть подробности
+					</a>
+				</div>
+
+				<router-outlet></router-outlet>
+			</ng-template>
+		</app-shared-card>
+	</div>
+</section>

@@ -17,7 +17,7 @@ import {
 	SimpleChanges,
 	ViewEncapsulation,
 } from '@angular/core';
-import {Post} from '../post-container/post-container.component';
+import { Post } from '../post-container/post-container.component';
 
 
 @Component({

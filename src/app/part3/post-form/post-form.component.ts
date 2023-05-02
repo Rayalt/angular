@@ -1,5 +1,5 @@
-import {Component, ElementRef, OnInit, EventEmitter, Output, ViewChild} from '@angular/core';
-import {Post} from '../post-container/post-container.component';
+import { Component, ElementRef, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Post } from '../post-container/post-container.component';
 
 @Component({
 	selector: 'app-part3-post-form',

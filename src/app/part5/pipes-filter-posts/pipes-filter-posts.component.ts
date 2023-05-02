@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 export interface PostTemplate {
 	title: string,
@@ -14,6 +14,7 @@ export class PipesFilterPostsComponent implements OnInit {
 
 	@Input() search: string = '';
 	@Input() searchParameter: keyof PostTemplate = 'title';
+	@Input('searchField') searchField!: ElementRef;
 	/*TODO: чтоб не было ошибки, надо писать searchParameter: keyof PostTemplate*/
 
 	allPost: PostTemplate[] = [
@@ -54,6 +55,11 @@ export class PipesFilterPostsComponent implements OnInit {
 				'в рамках своих собственных рациональных ограничений.',
 			tags: 'акция',
 		})
+	}
+
+	focusSearch() {
+		this.searchField.nativeElement.focus();
+		//todo делать фокус полю
 	}
 
 }
