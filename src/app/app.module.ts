@@ -16,6 +16,7 @@ import { Part7Module } from "./part7/part7/part7.module";
 import { Part8Module } from "./part8/part8/part8.module";
 import { Part9Module } from "./part9/part9/part9.module";
 import { Part10Module } from "./part10/part10/part10.module";
+import { Part11Module } from "./part11/part11/part11.module";
 
 
 // Компоненты
@@ -38,6 +39,7 @@ import { AppComponent } from './app.component';
 		Part8Module,
 		Part9Module,
 		Part10Module,
+		Part11Module,
 		LoginModule,
 		ErrorPageModule,
 	],
@@ -45,4 +47,4 @@ import { AppComponent } from './app.component';
 		AppComponent,
 	],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,30 @@
+<div
+	class="dynamic-modal container translate-middle-x translate-middle-y"
+>
+	<app-shared-card
+		cardTitleClass="flex-grow-1 mb-0"
+	>
+		<ng-template #header>
+			{{ title }}
+		</ng-template>
+		<ng-template #icon>
+			<button
+				type="button"
+				class="btn-close m-2 flex-shrink-0"
+				aria-label="Close"
+				(click)="close.emit()"
+			></button>
+		</ng-template>
+		<ng-template #body>
+			<p>
+				Но начало повседневной работы по формированию позиции напрямую зависит от модели развития.
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>
+
+<div
+	class="dynamic-modal-darker"
+	[ngClass]="ngModalClass"
+	(click)="close.emit()"
+></div>

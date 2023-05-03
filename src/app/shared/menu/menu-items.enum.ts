@@ -8,7 +8,7 @@ export enum menuItemCollection {
 	G_Part8 = 'Работа с сервером (HttpClient)',
 	H_Part9 = 'Мультистраничность с роутингом',
 	I_Part10 = 'Как работают модули',
-	J_Part11 = '',
+	J_Part11 = 'Дополнительные возможности',
 	K_Part12 = '',
 	L_Part13 = '',
 	M_Part14 = '',

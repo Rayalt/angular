@@ -27,7 +27,7 @@ export class Post2Component implements OnInit {
 
 		// this.routeService.params.subscribe((someParam: Params) => {
 		// 	console.log('someParam', someParam);
-		// 	this.post = this.allPostsService.getById(+someParam['id']);
+		// 	this.post2 = this.allPostsService.getById(+someParam['id']);
 		// });
 	}
 

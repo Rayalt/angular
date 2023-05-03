@@ -1,0 +1,33 @@
+<div class="container">
+	<app-shared-card
+		cardTitleClass="flex-grow-1 mb-0"
+	>
+		<ng-template #header>
+			Динамический компонент
+		</ng-template>
+		<ng-template #icon>
+			<button
+				class="btn btn-outline-info align-self-start"
+				(click)="modal = true"
+			>
+				Открыть модальное окно
+			</button>
+		</ng-template>
+		<ng-template #body>
+
+			<p>
+				Часть 1. Для работы компонента необходимо его наличие в шаблоне
+			</p>
+			<p class="text-primary font-monospace">
+				{{ '<' }}app-part11-dynamic>{{ '<' }}/app-part11-dynamic>
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>
+
+<app-part11-dynamic
+	*ngIf="modal"
+	[ngModalClass]="modal ? 'modal-open' : ''"
+	title="Франция намерена исследовать, почему склады ломятся от зерна"
+	(close)="modal = false"
+></app-part11-dynamic>

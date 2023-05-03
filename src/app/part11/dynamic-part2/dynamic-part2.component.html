@@ -1,0 +1,30 @@
+<div class="container">
+	<app-shared-card
+		cardTitleClass="flex-grow-1 mb-0"
+	>
+		<ng-template #header>
+			Динамический компонент
+		</ng-template>
+		<ng-template #icon>
+			<button
+				class="btn btn-outline-info align-self-start"
+				(click)="showModal()"
+			>
+				Открыть модальное окно
+			</button>
+		</ng-template>
+		<ng-template #body>
+
+			<p>
+				Часть 2. Компонент генерируется через ts
+			</p>
+			<p class="text-primary font-monospace">
+				(click)="showModal()"
+			</p>
+		</ng-template>
+	</app-shared-card>
+</div>
+
+<ng-template
+	part11Ref
+></ng-template>
