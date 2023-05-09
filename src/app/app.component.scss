@@ -73,10 +73,11 @@ body {
 
 .dynamic-modal {
 	position: absolute;
-	left: 18%;
+	left: 50%;
 	top: 40%;
 	max-width: 800px;
 	z-index: 99;
+	transform: translate(-50%, -50%);
 }
 
 .dynamic-modal-darker {

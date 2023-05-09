@@ -12,10 +12,8 @@ import {Meta, Title} from "@angular/platform-browser";
 export class DynamicPart2Component implements OnInit {
 
 	@ViewChild(RefDirective, {static: false}) refDir!: RefDirective;
-	modal: boolean = false;
 
 	constructor(
-		private resolver: ComponentFactoryResolver,
 		private title: Title, // изменить заголовок html дока
 		private meta: Meta, // изменить метатеги
 	) {
@@ -39,9 +37,8 @@ export class DynamicPart2Component implements OnInit {
 	}
 
 	showModal() {
-		const modalFactory = this.resolver.resolveComponentFactory(DynamicComponent);
 		this.refDir.containerRef.clear();
-		const component = this.refDir.containerRef.createComponent(modalFactory);
+		const component = this.refDir.containerRef.createComponent(DynamicComponent);
 
 		component.instance.title = 'Dynamic Title';
 		component.instance.close.subscribe(() => {
