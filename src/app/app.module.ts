@@ -1,5 +1,5 @@
 // Модули Angular
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 //Модули проекта
@@ -17,10 +17,12 @@ import { Part8Module } from "./part8/part8/part8.module";
 import { Part9Module } from "./part9/part9/part9.module";
 import { Part10Module } from "./part10/part10/part10.module";
 import { Part11Module } from "./part11/part11/part11.module";
+import { Part12Module } from "./part12/part12/part12.module";
 
 
 // Компоненты
 import { AppComponent } from './app.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
 	declarations: [
@@ -40,8 +42,15 @@ import { AppComponent } from './app.component';
 		Part9Module,
 		Part10Module,
 		Part11Module,
+		Part12Module,
 		LoginModule,
 		ErrorPageModule,
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: !isDevMode(),
+			// Register the ServiceWorker as soon as the application is stable
+			// or after 30 seconds (whichever comes first).
+			registrationStrategy: 'registerWhenStable:30000'
+		}),
 	],
 	bootstrap: [
 		AppComponent,

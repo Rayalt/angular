@@ -9,7 +9,7 @@ export enum menuItemCollection {
 	H_Part9 = 'Мультистраничность с роутингом',
 	I_Part10 = 'Как работают модули',
 	J_Part11 = 'Дополнительные возможности',
-	K_Part12 = '',
+	K_Part12 = 'Unit тестирование',
 	L_Part13 = '',
 	M_Part14 = '',
 	N_Part15 = '',

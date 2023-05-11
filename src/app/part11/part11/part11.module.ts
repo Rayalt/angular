@@ -7,7 +7,7 @@ import { CardModule } from "../../shared/card/card.module";
 import { DynamicComponent } from "../dynamic/dynamic.component";
 import { DynamicPart1Component } from "../dynamic-part1/dynamic-part1.component";
 import { DynamicPart2Component } from "../dynamic-part2/dynamic-part2.component";
-import {RefDirective} from "./ref.directive";
+import { RefDirective } from "./ref.directive";
 
 const routeChildCollection: Routes = [
 	{
