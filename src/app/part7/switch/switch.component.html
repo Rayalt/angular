@@ -6,17 +6,17 @@
 	<ng-template #body>
 		<div class="d-flex">
 			<button
-				class="btn"
 				(click)="setState('on')"
 				[ngClass]="state === 'off' ? 'btn-secondary' : 'btn-info'"
+				class="btn"
 			>
 				on
 			</button>
 
 			<button
-				class="btn mx-2"
 				(click)="setState('off')"
 				[ngClass]="state === 'off' ? 'btn-info' : 'btn-secondary'"
+				class="btn mx-2"
 			>
 				off
 			</button>

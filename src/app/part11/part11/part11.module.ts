@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from "@angular/router";
-import { Part11Component } from "./part11.component";
-import { HeaderSectionModule } from "../../shared/header-section/header-section.module";
-import { CardModule } from "../../shared/card/card.module";
-import { DynamicComponent } from "../dynamic/dynamic.component";
-import { DynamicPart1Component } from "../dynamic-part1/dynamic-part1.component";
-import { DynamicPart2Component } from "../dynamic-part2/dynamic-part2.component";
-import { RefDirective } from "./ref.directive";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import {Part11Component} from './part11.component';
+import {HeaderSectionModule} from '../../shared/header-section/header-section.module';
+import {CardModule} from '../../shared/card/card.module';
+import {DynamicComponent} from '../dynamic/dynamic.component';
+import {DynamicPart1Component} from '../dynamic-part1/dynamic-part1.component';
+import {DynamicPart2Component} from '../dynamic-part2/dynamic-part2.component';
+import {RefDirective} from './ref.directive';
 
 const routeChildCollection: Routes = [
 	{
@@ -38,4 +38,5 @@ const routeChildCollection: Routes = [
 	],
 })
 
-export class Part11Module {}
+export class Part11Module {
+}

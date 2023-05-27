@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {Post3Service} from "./post3.service";
+import {Component, OnInit} from '@angular/core';
+import {Post3Service} from './post3.service';
 
 @Component({
 	template: `Post3 Component`,
@@ -17,7 +17,7 @@ export class Post3Component implements OnInit {
 	ngOnInit() {
 		this.service.fetch().subscribe(p => {
 			this.post3Collection = p;
-		})
+		});
 	}
 
 	// add(title: string) {
@@ -35,7 +35,7 @@ export class Post3Component implements OnInit {
 			error: error => {
 				this.message = error.message;
 			},
-		})
+		});
 	}
 
 	delete(id: number) {

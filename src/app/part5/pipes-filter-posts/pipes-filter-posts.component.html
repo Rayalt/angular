@@ -4,37 +4,37 @@
 	</h2>
 
 	<button
-		class="btn btn-dark mb-3"
 		(click)="addNewPost()"
+		class="btn btn-dark mb-3"
 	>
 		Добавить новый пост
 	</button>
 
 	<div class="input-group mb-3">
 		<input
-			type="text"
+			#searchField
+			[(ngModel)]="search"
+			aria-describedby="addon"
+			aria-label="Поиск по"
 			class="form-control"
 			placeholder="Поиск по"
-			aria-label="Поиск по"
-			aria-describedby="addon"
-			[(ngModel)]="search"
-			#searchField
+			type="text"
 		>
 		<button
-			class="btn btn-outline-secondary"
 			(click)="searchParameter = 'title'"
+			class="btn btn-outline-secondary"
 		>
 			заголовку
 		</button>
 		<button
-			class="btn btn-outline-secondary"
 			(click)="searchParameter = 'text'"
+			class="btn btn-outline-secondary"
 		>
 			тексту
 		</button>
 		<button
-			class="btn btn-outline-secondary"
 			(click)="searchParameter = 'tags'"
+			class="btn btn-outline-secondary"
 		>
 			тегам
 		</button>
@@ -42,8 +42,8 @@
 
 	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 		<div
-			class="col"
 			*ngFor="let item of allPost | filter:search:searchParameter"
+			class="col"
 		>
 			<app-shared-card cardClass="mb-3 h-100">
 				<ng-template #header>

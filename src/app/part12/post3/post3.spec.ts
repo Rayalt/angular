@@ -1,6 +1,6 @@
-import {Post3Component} from "./post3.component";
-import {Post3Service} from "./post3.service";
-import {EMPTY, of, throwError} from "rxjs";
+import {Post3Component} from './post3.component';
+import {Post3Service} from './post3.service';
+import {EMPTY, of, throwError} from 'rxjs';
 
 describe('Post3 Component', () => {
 	let component: Post3Component;
@@ -11,7 +11,7 @@ describe('Post3 Component', () => {
 		const spy = jasmine.createSpyObj('HttpClient', {
 			post: of({}),
 			get: of({}),
-		})
+		});
 		service = new Post3Service(spy);
 		component = new Post3Component(service);
 	});
@@ -79,4 +79,4 @@ describe('Post3 Component', () => {
 
 		expect(spy).not.toHaveBeenCalled();
 	});
-})
+});

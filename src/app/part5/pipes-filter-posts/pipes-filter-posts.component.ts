@@ -41,7 +41,8 @@ export class PipesFilterPostsComponent implements OnInit {
 		},
 	];
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}
@@ -54,7 +55,7 @@ export class PipesFilterPostsComponent implements OnInit {
 				'и по сей день остаются уделом либералов, которые жаждут быть заблокированы ' +
 				'в рамках своих собственных рациональных ограничений.',
 			tags: 'акция',
-		})
+		});
 	}
 
 	focusSearch() {

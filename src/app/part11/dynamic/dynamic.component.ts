@@ -12,7 +12,8 @@ export class DynamicComponent implements OnInit {
 
 	modal: boolean = false;
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

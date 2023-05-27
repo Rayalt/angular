@@ -1,8 +1,7 @@
-import { NgModule } from "@angular/core";
-import {PreloadAllModules, RouterModule, Routes} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 
-const routeCollection: Routes = [
-];
+const routeCollection: Routes = [];
 
 @NgModule({
 	imports: [
@@ -17,4 +16,5 @@ const routeCollection: Routes = [
 	exports: [RouterModule], // открывает публичный api к данным, которые мы сюда передаем
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

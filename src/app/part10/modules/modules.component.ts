@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'app-part10-modules',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulesComponent implements OnInit {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

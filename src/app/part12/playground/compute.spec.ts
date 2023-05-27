@@ -1,4 +1,4 @@
-import { compute } from "./compute";
+import {compute} from './compute';
 
 describe('compute', () => {
 	it('should return 0 if input < 0', () => {
@@ -10,4 +10,4 @@ describe('compute', () => {
 		const res = compute(1);
 		expect(res).toBe(2);
 	});
-})
+});

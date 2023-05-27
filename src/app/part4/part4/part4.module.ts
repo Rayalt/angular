@@ -1,13 +1,13 @@
-import { NgModule } from "@angular/core";
-import { StyleDirective } from "../directives/style.directive";
-import { DirectivesContentComponent } from "../directives-content/directives-content.component";
-import { DirectiveStructureComponent } from "../directive-structure/directive-structure.component";
-import { IfNotDirective } from "../directives/if-not.directive";
-import {RouterModule, Routes} from "@angular/router";
-import { CommonModule } from "@angular/common";
-import { CardModule } from "../../shared/card/card.module";
-import { Part4Component } from "./part4.component";
-import { HeaderSectionModule } from "../../shared/header-section/header-section.module";
+import {NgModule} from '@angular/core';
+import {StyleDirective} from '../directives/style.directive';
+import {DirectivesContentComponent} from '../directives-content/directives-content.component';
+import {DirectiveStructureComponent} from '../directive-structure/directive-structure.component';
+import {IfNotDirective} from '../directives/if-not.directive';
+import {RouterModule, Routes} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {CardModule} from '../../shared/card/card.module';
+import {Part4Component} from './part4.component';
+import {HeaderSectionModule} from '../../shared/header-section/header-section.module';
 
 const routeChildCollection: Routes = [
 	{
@@ -35,4 +35,5 @@ const routeChildCollection: Routes = [
 	],
 })
 
-export class Part4Module {}
+export class Part4Module {
+}

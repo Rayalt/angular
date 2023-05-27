@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-nested2',
-  templateUrl: './nested2.component.html',
-  styles: [
-  ]
+	selector: 'app-nested2',
+	templateUrl: './nested2.component.html',
+	styles: []
 })
 export class Nested2Component implements OnInit {
 
-  constructor() { }
+	constructor() {
+	}
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
 }

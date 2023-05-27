@@ -7,14 +7,14 @@
 				{{'Тяжёлое машиностроение — это вам не глас грядущего поколения' | pageName}}
 			</ng-template>
 			<ng-template #body>
-				<button class="btn btn-outline-info align-self-start mb-2" (click)="read = true">
+				<button (click)="read = true" class="btn btn-outline-info align-self-start mb-2">
 					Отметить как прочитанное
 				</button>
 				<p
-					class="mb-2"
 					[ngClass]="{
 						'text-info': !!read
 					}"
+					class="mb-2"
 				>
 					Современные технологии достигли такого уровня, что высокое качество позиционных
 					исследований является качественно новой ступенью как самодостаточных,
@@ -22,10 +22,10 @@
 				</p>
 
 				<div class="btn-group flex-shrink-0 m-2 mx-0">
-					<a class="btn btn-dark" [routerLink]="['/part10b', 'nested2']">
+					<a [routerLink]="['/part10b', 'nested2']" class="btn btn-dark">
 						Показать полностью
 					</a>
-					<a class="btn btn-secondary" [routerLink]="['/part10b']">
+					<a [routerLink]="['/part10b']" class="btn btn-secondary">
 						Скрыть подробности
 					</a>
 				</div>

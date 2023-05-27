@@ -1,10 +1,11 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
-import {FirstValidators} from "../validators/first.validators";
+import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FirstValidators} from '../validators/first.validators';
 
 type cityTemplate = {
 	[key: string]: string;
 }
+
 // TODO можно вместо as keyof object писать
 
 @Component({
@@ -69,7 +70,7 @@ export class FormComponent implements OnInit {
 			ru: 'Москва',
 			ua: 'Киев',
 			by: 'Минск'
-		}
+		};
 
 		const cityKey = this.address.get('country')?.value as keyof typeof cityMap;
 

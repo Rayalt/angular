@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { CounterService } from "./counter-service";
-import { CounterLocalService } from "./counter-local.service";
+import {Component} from '@angular/core';
+import {CounterService} from './counter-service';
+import {CounterLocalService} from './counter-local.service';
 
 @Component({
 	selector: 'app-par6-service-create',
@@ -13,7 +13,7 @@ export class ServiceCreateComponent {
 		public appCounterService: CounterService,
 		public counterLocalService: CounterLocalService,
 	) {
-	// TODO: private не работает
+		// TODO: private не работает
 
 	}
 

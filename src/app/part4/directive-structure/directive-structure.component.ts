@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'app-part4-directive-structure',
@@ -8,7 +8,8 @@ export class DirectiveStructureComponent implements OnInit {
 
 	@Input() isVisible: boolean = true;
 
-	constructor() {}
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

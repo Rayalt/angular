@@ -17,7 +17,7 @@ import {
 	SimpleChanges,
 	ViewEncapsulation,
 } from '@angular/core';
-import { Post } from '../post-container/post-container.component';
+import {Post} from '../post-container/post-container.component';
 
 
 @Component({
@@ -27,16 +27,14 @@ import { Post } from '../post-container/post-container.component';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None // делает стили компонента доступными глобально
 })
-export class PostComponent implements
-	OnChanges,
+export class PostComponent implements OnChanges,
 	OnInit,
 	DoCheck,
 	AfterContentInit,
 	AfterContentChecked,
 	AfterViewInit,
 	AfterViewChecked,
-	OnDestroy
-{
+	OnDestroy {
 
 	@Input() onePost!: Post;
 

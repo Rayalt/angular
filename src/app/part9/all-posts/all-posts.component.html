@@ -11,18 +11,18 @@
 		<ng-template #icon>
 			<div class="btn-group flex-shrink-0 m-sm-2 mb-0 mt-sm-0 mt-2">
 				<button
-					class="btn btn-dark"
-					[routerLink]="['/part9']"
+					[fragment]="'fragment'"
 					[queryParams]="{
 						showIds: true
 					}"
-					[fragment]="'fragment'"
+					[routerLink]="['/part9']"
+					class="btn btn-dark"
 				>
 					Показать IDS
 				</button>
 				<button
-					class="btn btn-secondary"
 					(click)="showIdsProgram()"
+					class="btn btn-secondary"
 				>
 					Показать IDS (program)
 				</button>
@@ -30,11 +30,11 @@
 		</ng-template>
 		<ng-template #body>
 			<div
-				class="card shadow-sm"
+				*ngFor="let onePost of postsService.allPosts; let idx = index"
 				[ngClass]="{
 					'mt-4': idx !== 0
 				}"
-				*ngFor="let onePost of postsService.allPosts; let idx = index"
+				class="card shadow-sm"
 			>
 				<div class="card-header">
 					<h2 class="h2">
@@ -46,13 +46,13 @@
 					<p class="text-truncate mb-2">
 						{{onePost.text}}
 					</p>
-					<a class="link" [routerLink]="['/part9', onePost.id]">
+					<a [routerLink]="['/part9', onePost.id]" class="link">
 						Читать далее
 					</a>
 				</div>
 				<div
-					class="card-footer"
 					*ngIf="showIds === true"
+					class="card-footer"
 				>
 					{{onePost.id}}
 				</div>

@@ -1,4 +1,4 @@
-import { greet } from "./greet";
+import {greet} from './greet';
 
 describe('greet', function () {
 	it('should include name in result', function () {

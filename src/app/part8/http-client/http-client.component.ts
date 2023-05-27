@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpService, TodoTemplate} from "../service/http.service";
-import {retry} from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import {HttpService, TodoTemplate} from '../service/http.service';
 
 @Component({
 	selector: 'app-part8-http-client',
@@ -16,7 +15,8 @@ export class HttpClientComponent implements OnInit {
 
 	errorMsg: string = '';
 
-	constructor(private httpService: HttpService) { }
+	constructor(private httpService: HttpService) {
+	}
 
 	ngOnInit(): void {
 		this.fetchTodoCollection();
@@ -50,17 +50,17 @@ export class HttpClientComponent implements OnInit {
 				error: error => {
 					this.errorMsg = error.message;
 				},
-			})
+			});
 
-			// Старая запись
-			// .subscribe(todoCollection => {
-			// 	// console.log('todoCollection', todoCollection);
-			// 	this.todoCollection = todoCollection;
-			//
-			// 	this.loading = false;
-			// }, error => {
-			// 		this.errorMsg = error.message;
-			// 	});
+		// Старая запись
+		// .subscribe(todoCollection => {
+		// 	// console.log('todoCollection', todoCollection);
+		// 	this.todoCollection = todoCollection;
+		//
+		// 	this.loading = false;
+		// }, error => {
+		// 		this.errorMsg = error.message;
+		// 	});
 	}
 
 	removeHttp(id?: number) {
@@ -79,6 +79,6 @@ export class HttpClientComponent implements OnInit {
 				if (a) {
 					a.completed = true;
 				}
-			})
+			});
 	}
 }

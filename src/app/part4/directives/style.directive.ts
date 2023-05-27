@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostListener, HostBinding, Input, Renderer2} from "@angular/core";
+import {Directive, ElementRef, HostListener, HostBinding, Input, Renderer2} from '@angular/core';
 
 @Directive({
 	selector: '[appPart4Style]'
@@ -9,7 +9,7 @@ export class StyleDirective {
 	@Input('appPart4Style') color: string = '#dc3545';
 	@Input() fontWeight: string = 'normal';
 
-	@Input() dStyles!: {border?: string, fontWeight?: string, borderRadius?: string, background?: string};
+	@Input() dStyles!: { border?: string, fontWeight?: string, borderRadius?: string, background?: string };
 
 	@HostBinding('style.background') elBg: any = '';
 
@@ -42,7 +42,7 @@ export class StyleDirective {
 		this.renderer2.setStyle(this.elRef.nativeElement, 'color', null);
 		this.renderer2.setStyle(this.elRef.nativeElement, 'fontWeight', null);
 
-		this.renderer2.setStyle(this.elRef.nativeElement, 'fontWeight',null);
+		this.renderer2.setStyle(this.elRef.nativeElement, 'fontWeight', null);
 		this.renderer2.setStyle(this.elRef.nativeElement, 'border', null);
 		this.renderer2.setStyle(this.elRef.nativeElement, 'borderRadius', null);
 

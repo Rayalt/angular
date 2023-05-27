@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {AllPostsService, Post2Template} from "../all-posts/all-posts.service";
+import {ActivatedRoute, Router} from '@angular/router';
+import {Post2Template} from '../all-posts/all-posts.service';
 
 @Component({
 	selector: 'app-part9-post2',
@@ -16,14 +16,15 @@ export class Post2Component implements OnInit {
 		private routeService: ActivatedRoute,
 		private someRouter: Router,
 		// private allPostsService: AllPostsService,
-	) {}
+	) {
+	}
 
 	ngOnInit(): void {
 		// this.post2 = this.routeService.snapshot.data['post2'];
 
 		this.routeService.data.subscribe(data => {
 			this.post2 = data['post2'];
-		})
+		});
 
 		// this.routeService.params.subscribe((someParam: Params) => {
 		// 	console.log('someParam', someParam);

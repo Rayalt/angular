@@ -1,13 +1,12 @@
-import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
-import { DynamicComponent } from "../dynamic/dynamic.component";
-import { RefDirective } from "../part11/ref.directive";
-import {Meta, Title} from "@angular/platform-browser";
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {DynamicComponent} from '../dynamic/dynamic.component';
+import {RefDirective} from '../part11/ref.directive';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-part11-dynamic-part2',
 	templateUrl: './dynamic-part2.component.html',
-	styles: [
-	]
+	styles: []
 })
 export class DynamicPart2Component implements OnInit {
 

@@ -43,7 +43,7 @@ export class AllPostsService {
 				'по разработке укрепления моральных ценностей.',
 			id: 44,
 		},
-	]
+	];
 
 	getById(id: number) {
 		return this.allPosts.find(p => p.id === id) as Post2Template;

@@ -1,13 +1,13 @@
-import { NgModule, Provider } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { CardModule } from "../../shared/card/card.module";
-import { FormsModule } from "@angular/forms";
-import {RouterModule, Routes} from "@angular/router";
-import { Part8Component } from "./part8.component";
-import { HttpClientComponent } from "../http-client/http-client.component";
-import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
-import { AuthInterceptor } from "../interceptor/auth.interceptor";
-import { HeaderSectionModule } from "../../shared/header-section/header-section.module";
+import {NgModule, Provider} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CardModule} from '../../shared/card/card.module';
+import {FormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
+import {Part8Component} from './part8.component';
+import {HttpClientComponent} from '../http-client/http-client.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AuthInterceptor} from '../interceptor/auth.interceptor';
+import {HeaderSectionModule} from '../../shared/header-section/header-section.module';
 
 const routeChildCollection: Routes = [
 	{
@@ -44,4 +44,5 @@ const INTERCEPTOR_PROVIDER: Provider = {
 	],
 })
 
-export class Part8Module {}
+export class Part8Module {
+}

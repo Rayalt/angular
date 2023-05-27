@@ -17,7 +17,8 @@ export class CardComponent implements OnInit {
 
 	public templateContext: any = {};
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {AllPostsService} from "./all-posts.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {AllPostsService} from './all-posts.service';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
 	selector: 'app-part9-all-posts',
@@ -14,17 +14,18 @@ export class AllPostsComponent implements OnInit {
 		public postsService: AllPostsService,
 		private routeActive: ActivatedRoute,
 		private router: Router,
-	) {}
+	) {
+	}
 
 	ngOnInit(): void {
 		this.routeActive.queryParams.subscribe((someParam: Params) => {
 			console.log('someParam', someParam);
 			this.showIds = !!someParam?.['showIds'];
-		})
+		});
 
 		this.routeActive.fragment.subscribe(fragment => {
 			console.log('Fragment', fragment);
-		})
+		});
 	}
 
 	showIdsProgram() {
@@ -33,6 +34,6 @@ export class AllPostsComponent implements OnInit {
 				showIds: true,
 			},
 			fragment: 'program-fragment'
-		})
+		});
 	}
 }

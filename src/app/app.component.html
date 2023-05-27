@@ -1,28 +1,24 @@
-<!------------------Part2------------------>
-
 <header class="d-flex justify-content-between bg-white shadow-lg p-4 position-sticky top-0 z-20">
 	<a
-		[routerLink]="['/']"
-		[routerLinkActive]="'btn-dark text-light'"
 		[routerLinkActiveOptions]="{exact: true}"
+		[routerLinkActive]="'btn-dark text-light'"
+		[routerLink]="['/']"
 		class="h5 fw-normal btn-lg btn btn-outline-dark mb-0"
 	>
 		В начало
 	</a>
 
-	<button #menuButton (click)="openMenu()" class="btn btn-lg btn-outline-dark">
+	<button (click)="menu.openMenu()" class="btn btn-lg btn-outline-dark">
 		<i class="bi bi-list"></i>
 	</button>
 </header>
 
-<div class="nav bg-light">
-	<div class="nav__inner">
-		<app-shared-menu
-			class="d-flex flex-column h-100 justify-content-between"
-		></app-shared-menu>
-	</div>
-</div>
+<app-shared-menu
+	#menu
+	class="d-flex flex-column h-100 justify-content-between"
+></app-shared-menu>
 
-<div #pageDarker (click)="closeMenu()" class="darker"></div>
+
+<!--<div *ngIf="isMenuOpen" [@menu] class="darker"></div>-->
 
 <router-outlet></router-outlet>

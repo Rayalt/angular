@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'app-nested-pages2',
@@ -8,7 +8,8 @@ export class NestedPages2Component implements OnInit {
 
 	read: boolean = false;
 
-	constructor() {}
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

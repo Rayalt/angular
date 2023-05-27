@@ -1,5 +1,5 @@
-import { Component, ElementRef, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
-import { Post } from '../post-container/post-container.component';
+import {Component, ElementRef, OnInit, EventEmitter, Output, ViewChild} from '@angular/core';
+import {Post} from '../post-container/post-container.component';
 
 @Component({
 	selector: 'app-part3-post-form',
@@ -15,14 +15,15 @@ export class PostFormComponent implements OnInit {
 	addedTitle = '';
 	addedText = '';
 
-	constructor() {}
+	constructor() {
+	}
 
 	addPost() {
 		if (this.addedTitle.trim() && this.addedText.trim()) {
 			const post: Post = {
 				title: this.addedTitle,
 				text: this.addedText,
-			}
+			};
 
 			this.onAdd.emit(post);
 
@@ -37,5 +38,6 @@ export class PostFormComponent implements OnInit {
 		this.inputRef.nativeElement.focus();
 	}
 
-	ngOnInit() {}
+	ngOnInit() {
+	}
 }

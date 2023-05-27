@@ -1,14 +1,14 @@
-import {AbstractControl, FormControl} from "@angular/forms";
-import {Observable} from "rxjs";
+import {AbstractControl, FormControl} from '@angular/forms';
+import {Observable} from 'rxjs';
 
 export interface Something {
-	[key: string]: boolean
+	[key: string]: boolean;
 }
 
 export class FirstValidators {
 	static restrictedEmails(control: FormControl): Something | null {
 		if (['v@mail.ru', 'test@mail.ru'].includes(control.value)) {
-			return {restrictedEmail: true}
+			return {restrictedEmail: true};
 		}
 		return null;
 	}
@@ -18,11 +18,11 @@ export class FirstValidators {
 		return new Promise(resolve => {
 			setTimeout(() => {
 				if (control.value === 'async@mail.ru') {
-					resolve({uniqEmail: true})
+					resolve({uniqEmail: true});
 				} else {
 					resolve(null);
 				}
-			}, 2000)
-		})
+			}, 2000);
+		});
 	}
 }

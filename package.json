@@ -12,6 +12,7 @@
 	},
 	"private": true,
 	"dependencies": {
+		"@angular-eslint/schematics": "14.0.0",
 		"@angular/animations": "^14.3.0",
 		"@angular/cdk": "^15.2.6",
 		"@angular/common": "14.3.0",
@@ -45,6 +46,7 @@
 		"karma-coverage": "~2.1.0",
 		"karma-jasmine": "~4.0.0",
 		"karma-jasmine-html-reporter": "~1.7.0",
+		"ng-animate": "^2.0.1",
 		"typescript": "~4.6.2"
 	}
 }

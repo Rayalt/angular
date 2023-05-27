@@ -1,11 +1,11 @@
-import { NgModule } from "@angular/core";
-import { Part10Component } from "./part10.component";
-import { ModulesComponent } from "../modules/modules.component";
-import { CommonModule } from "@angular/common";
-import { RouterModule, Routes } from "@angular/router";
-import { CardModule } from "../../shared/card/card.module";
-import { SharedModule } from "../shared/shared.module";
-import { HeaderSectionModule } from "../../shared/header-section/header-section.module";
+import {NgModule} from '@angular/core';
+import {Part10Component} from './part10.component';
+import {ModulesComponent} from '../modules/modules.component';
+import {CommonModule} from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import {CardModule} from '../../shared/card/card.module';
+import {SharedModule} from '../shared/shared.module';
+import {HeaderSectionModule} from '../../shared/header-section/header-section.module';
 
 const routeChildCollection: Routes = [
 	{
@@ -35,4 +35,5 @@ const routeChildCollection: Routes = [
 	],
 })
 
-export class Part10Module {}
+export class Part10Module {
+}

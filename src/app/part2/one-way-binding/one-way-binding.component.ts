@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
 	selector: 'app-part2-one-way-binding',
@@ -16,7 +16,7 @@ export class OneWayBindingComponent {
 			console.log('Timeout');
 
 			this.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png';
-		}, 5000)
+		}, 5000);
 	}
 
 	onInput(event: KeyboardEvent): void {

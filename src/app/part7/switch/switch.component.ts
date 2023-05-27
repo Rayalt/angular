@@ -1,5 +1,5 @@
 import {Component, forwardRef, Provider} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 const VALUE_ACCESSOR: Provider = {
 	provide: NG_VALUE_ACCESSOR,
@@ -16,7 +16,8 @@ export class SwitchComponent implements ControlValueAccessor {
 
 	state: string = 'off';
 
-	private onChange = (value: any) => {};
+	private onChange = (value: any) => {
+	};
 
 	setState(state: string) {
 		this.state = state;

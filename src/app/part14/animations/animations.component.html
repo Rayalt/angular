@@ -1,0 +1,174 @@
+<section class="py-5">
+	<div class="container">
+		<app-shared-card
+			cardBodyClass="d-flex flex-column"
+			cardClass="mb-3"
+			cardTitleClass="flex-grow-1"
+		>
+			<ng-template #header>
+				Определение состояний
+			</ng-template>
+			<ng-template #icon>
+				<div class="btn-group">
+					<button
+						(click)="animate()"
+						class="btn btn-dark"
+					>
+						анимировать
+					</button>
+					<button
+						(click)="boxState = 'special'"
+						class="btn btn-secondary"
+					>
+						установить special
+					</button>
+					<button
+						(click)="isVisible = !isVisible"
+						class="btn btn-info"
+					>
+						{{ isVisible ? 'скрыть' : 'показать' }}
+					</button>
+				</div>
+			</ng-template>
+			<ng-template #body>
+				<div
+					*ngIf="isVisible"
+					[@box]="boxState"
+					class="
+						border border-3 border-dark text-white
+						d-flex justify-content-center align-items-center
+						py-5 px-3
+					"
+				>
+					<span>
+						boxState: {{ boxState | uppercase }}
+					</span>
+				</div>
+			</ng-template>
+		</app-shared-card>
+		<app-shared-card
+			cardBodyClass="d-flex flex-column"
+			cardClass="mb-3"
+			cardTitleClass="flex-grow-1"
+		>
+			<ng-template #header>
+				Шаги анимации Keyframes
+			</ng-template>
+			<ng-template #icon>
+				<div class="btn-group">
+					<button
+						(click)="animate2()"
+						class="btn btn-dark"
+					>
+						анимировать
+					</button>
+					<button
+						(click)="boxState2 = 'special'"
+						class="btn btn-secondary"
+					>
+						установить special
+					</button>
+					<button
+						(click)="isVisible2 = !isVisible2"
+						class="btn btn-info"
+					>
+						{{ isVisible2 ? 'скрыть' : 'показать' }}
+					</button>
+				</div>
+			</ng-template>
+			<ng-template #body>
+				<div
+					*ngIf="isVisible2"
+					[@box2]="boxState2"
+					class="
+						border border-3 border-dark text-white
+						d-flex justify-content-center align-items-center
+						py-5 px-3
+					"
+				>
+					<span>
+						boxState: {{ boxState2 | uppercase }}
+					</span>
+				</div>
+			</ng-template>
+		</app-shared-card>
+
+		<app-shared-card
+			cardBodyClass="d-flex flex-column"
+			cardClass="mb-3"
+			cardTitleClass="flex-grow-1"
+		>
+			<ng-template #header>
+				События анимации
+			</ng-template>
+			<ng-template #icon>
+				<div class="btn-group">
+					<button
+						(click)="animate3()"
+						class="btn btn-dark"
+					>
+						анимировать
+					</button>
+					<button
+						(click)="boxState3 = 'special'"
+						class="btn btn-secondary"
+					>
+						установить special
+					</button>
+					<button
+						(click)="isVisible3 = !isVisible3"
+						class="btn btn-info"
+					>
+						{{ isVisible3 ? 'скрыть' : 'показать' }}
+					</button>
+				</div>
+			</ng-template>
+			<ng-template #body>
+				<div
+					(@box3.done)="animation3Done($event)"
+					(@box3.start)="animation3Started($event)"
+					*ngIf="isVisible3"
+					[@box3]="boxState3"
+					class="
+						border border-3 border-dark text-white
+						d-flex justify-content-center align-items-center
+						py-5 px-3
+					"
+				>
+					<span>
+						boxState: {{ boxState3 | uppercase }}
+					</span>
+				</div>
+			</ng-template>
+		</app-shared-card>
+
+		<app-shared-card
+			cardBodyClass="d-flex flex-column"
+			cardTitleClass="flex-grow-1"
+		>
+			<ng-template #header>
+				Библиотека ng-animate
+			</ng-template>
+			<ng-template #icon>
+				<button
+					(click)="isVisible4 = !isVisible4"
+					class="btn btn-info"
+				>
+					{{ isVisible3 ? 'скрыть' : 'показать' }}
+				</button>
+			</ng-template>
+			<ng-template #body>
+				<div
+					*ngIf="isVisible4"
+					[@bounce]=""
+					class="
+						border border-3 border-dark text-white
+						d-flex justify-content-center align-items-center
+						py-5 px-3
+					"
+				>
+				</div>
+			</ng-template>
+		</app-shared-card>
+	</div>
+</section>

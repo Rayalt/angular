@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="card shadow-sm">
+		<div class="card-header d-flex flex-sm-row flex-column">
+			<h2 class="h2">
+			<span [class.text-success]="counter % 2 === 0" class="counter">
+				{{ counter }}
+			</span>
+			</h2>
+
+			<div class="btn-group flex-shrink-0 m-sm-2 mb-0 mt-sm-0 mt-2">
+				<button
+					(click)="increment()"
+					class="btn btn-dark"
+					id="increment"
+				>
+					+
+				</button>
+				<button
+					(click)="decrement()"
+					class="btn btn-secondary"
+				>
+					-
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!--	<app-shared-card>-->
+	<!--		<ng-template #header>-->
+	<!--			<span class="counter" [class.text-success]="counter % 2 === 0">-->
+	<!--				{{ counter }}-->
+	<!--			</span>-->
+	<!--		</ng-template>-->
+	<!--		<ng-template #icon>-->
+	<!--			<div class="btn-group flex-shrink-0 m-sm-2 mb-0 mt-sm-0 mt-2">-->
+	<!--				<button-->
+	<!--					id="increment"-->
+	<!--					class="btn btn-dark"-->
+	<!--					(click)="increment()"-->
+	<!--				>-->
+	<!--					+-->
+	<!--				</button>-->
+	<!--				<button-->
+	<!--					class="btn btn-secondary"-->
+	<!--					(click)="decrement()"-->
+	<!--				>-->
+	<!--					- -->
+	<!--				</button>-->
+	<!--			</div>-->
+	<!--		</ng-template>-->
+	<!--	</app-shared-card>-->
+	<!--	TODO: not work-->
+</div>

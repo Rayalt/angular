@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { PostTemplate } from "./pipes-filter-posts.component";
+import {Pipe, PipeTransform} from '@angular/core';
+import {PostTemplate} from './pipes-filter-posts.component';
 
 @Pipe({
 	name: 'filter',
@@ -15,7 +15,7 @@ export class FilterPipe implements PipeTransform {
 		return allPost.filter(post => {
 			/*TODO: чтоб не было ошибки, надо писать field: keyof PostTemplate*/
 			return post[field].toLowerCase().includes(search.toLowerCase());
-		})
+		});
 	}
 
 }

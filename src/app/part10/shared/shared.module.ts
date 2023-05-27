@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
-import { ColorDirective } from "./color.directive";
-import { PageNamePipe } from "./page-name.pipe";
+import {NgModule} from '@angular/core';
+import {ColorDirective} from './color.directive';
+import {PageNamePipe} from './page-name.pipe';
 
 @NgModule({
 	exports: [
@@ -13,4 +13,5 @@ import { PageNamePipe } from "./page-name.pipe";
 	],
 })
 
-export class SharedModule {}
+export class SharedModule {
+}

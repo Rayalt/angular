@@ -32,24 +32,16 @@ body {
 	overflow: hidden;
 	overflow-y: auto;
 	padding: 2.5rem;
-	transform: translateX(-288px);
-	transition: transform .25s ease;
 	width: 288px;
+	box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.175);
 
 	@media (min-width: 768px) {
 		width: 600px;
-		transform: translateX(-600px);
 	}
 
 	@media (min-width: 992px) {
 		width: 800px;
-		transform: translateX(-800px);
 		height: 50%;
-	}
-
-	.open-nav & {
-		box-shadow: #ced0d6;
-		transform: translateX(0);
 	}
 }
 
@@ -57,18 +49,11 @@ body {
 	background: #0000003f;
 	height: 100%;
 	left: 0;
-	opacity: 0;
-	pointer-events: none;
 	position: fixed;
 	top: 0;
-	transition: opacity .5s ease;
 	width: 100%;
 	z-index: 98;
-
-	.open-nav & {
-		opacity: 1;
-		pointer-events: auto;
-	}
+	pointer-events: none;
 }
 
 .dynamic-modal {

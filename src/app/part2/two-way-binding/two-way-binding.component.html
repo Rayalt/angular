@@ -10,14 +10,14 @@
 				<!--Длинный вариант-->
 				<div class="col">
 					<input
-						type="text"
-						class="form-control"
-						placeholder="Введите текст"
-						aria-label="Введите текст"
-						aria-describedby="addon"
 						(input)="onInput3($event)"
 						[value]="inputTitle"
+						aria-describedby="addon"
+						aria-label="Введите текст"
+						class="form-control"
 						id="eventInput2"
+						placeholder="Введите текст"
+						type="text"
 					>
 					<label class="form-label mt-2 mb-0" for="eventInput2">
 						Длинный вариант two way binding:
@@ -30,13 +30,13 @@
 				<!--Более короткий вариант-->
 				<div class="col">
 					<input
-						type="text"
-						class="form-control"
-						placeholder="Введите текст"
-						aria-label="Введите текст"
-						aria-describedby="addon"
 						[(ngModel)]="inputTitle"
+						aria-describedby="addon"
+						aria-label="Введите текст"
+						class="form-control"
 						id="eventNgModel"
+						placeholder="Введите текст"
+						type="text"
 					>
 					<label class="form-label mt-2 mb-0" for="eventNgModel">
 						Короткий вариант two way binding:

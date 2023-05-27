@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { menuItemCollection } from 'src/app/shared/menu/menu-items.enum';
+import {Component, OnInit} from '@angular/core';
+import {menuItemCollection} from 'src/app/shared/menu/menu-items.enum';
 
 @Component({
 	selector: 'app-part9',
@@ -7,7 +7,8 @@ import { menuItemCollection } from 'src/app/shared/menu/menu-items.enum';
 })
 export class Part9Component implements OnInit {
 
-	constructor() { }
+	constructor() {
+	}
 
 	menuItemCollection = menuItemCollection;
 

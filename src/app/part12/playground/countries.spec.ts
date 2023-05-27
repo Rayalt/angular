@@ -1,4 +1,4 @@
-import { countries } from "./countries";
+import {countries} from './countries';
 
 describe('countries', () => {
 	it('should contain element\'s name', () => {
@@ -8,4 +8,4 @@ describe('countries', () => {
 		expect(res).toContain('BR');
 		expect(res).toContain('AU');
 	});
-})
+});

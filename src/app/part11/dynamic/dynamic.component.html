@@ -9,10 +9,10 @@
 		</ng-template>
 		<ng-template #icon>
 			<button
-				type="button"
-				class="btn-close m-2 flex-shrink-0"
-				aria-label="Close"
 				(click)="close.emit()"
+				aria-label="Close"
+				class="btn-close m-2 flex-shrink-0"
+				type="button"
 			></button>
 		</ng-template>
 		<ng-template #body>
@@ -24,7 +24,7 @@
 </div>
 
 <div
-	class="dynamic-modal-darker"
-	[ngClass]="ngModalClass"
 	(click)="close.emit()"
+	[ngClass]="ngModalClass"
+	class="dynamic-modal-darker"
 ></div>

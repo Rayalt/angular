@@ -7,8 +7,8 @@
 		</ng-template>
 		<ng-template #icon>
 			<button
-				class="btn btn-outline-info align-self-start"
 				(click)="modal = true"
+				class="btn btn-outline-info align-self-start"
 			>
 				Открыть модальное окно
 			</button>
@@ -26,8 +26,8 @@
 </div>
 
 <app-part11-dynamic
+	(close)="modal = false"
 	*ngIf="modal"
 	[ngModalClass]="modal ? 'modal-open' : ''"
 	title="Франция намерена исследовать, почему склады ломятся от зерна"
-	(close)="modal = false"
 ></app-part11-dynamic>

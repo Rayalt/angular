@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class CounterLocalService {
 
-	constructor() {}
+	constructor() {
+	}
 
 	counter: number = 0;
 

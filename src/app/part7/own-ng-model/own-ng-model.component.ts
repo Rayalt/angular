@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'app-part7-own-ng-model',
@@ -8,7 +8,8 @@ export class OwnNgModelComponent implements OnInit {
 
 	appState: string = 'on';
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

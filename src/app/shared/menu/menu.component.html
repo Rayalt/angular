@@ -1,54 +1,60 @@
-<nav>
-	<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-3 gy-3">
-		<li
-			*ngFor="let item of menuItemCollection | keyvalue"
-			class="col"
-		>
-			<a
-				[routerLink]="['/part'+(item.key | slice:6)]"
-				[routerLinkActive]="'btn-outline-info'"
-				[routerLinkActiveOptions]="{exact: true}"
-				class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
-				(click)="closeMenu()"
-			>
-				<span class="text-black">Часть {{item.key | slice:6}}.</span>
-				<br>
-				{{item.value}}
-			</a>
-		</li>
-	</ul>
+<div *ngIf="isMenuOpen" [@menu] class="nav bg-light">
+	<div class="nav__inner">
 
-	<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-3 gy-3 border-top mt-3">
-		<li
-			*ngFor="let item of menuItemSeparateCollection | keyvalue"
-			class="col"
-		>
-			<a
-				[routerLink]="['/part'+(item.key | slice:6)]"
-				[routerLinkActive]="'btn-outline-info'"
-				[routerLinkActiveOptions]="{exact: true}"
-				class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
-				(click)="closeMenu()"
-			>
-				<span class="text-black">Часть {{item.key | slice:6}}.</span>
-				<br>
-				{{item.value}}
-			</a>
-		</li>
-	</ul>
-</nav>
+		<nav>
+			<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-3 gy-3">
+				<li
+					*ngFor="let item of menuItemCollection | keyvalue"
+					class="col"
+				>
+					<a
+						(click)="closeMenu()"
+						[routerLinkActiveOptions]="{exact: true}"
+						[routerLinkActive]="'btn-outline-info'"
+						[routerLink]="['/part'+(item.key | slice:6)]"
+						class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
+					>
+						<span class="text-black">Часть {{item.key | slice:6}}.</span>
+						<br>
+						{{item.value}}
+					</a>
+				</li>
+			</ul>
 
-<div class="d-flex justify-content-end border-top mt-3 pt-3">
-	<button
-		class="btn btn-lg btn-dark mx-2"
-		(click)="auth.login()"
-	>
-		Войти
-	</button>
-	<button
-		class="btn btn-lg btn-secondary"
-		(click)="auth.logout()"
-	>
-		Выйти
-	</button>
+			<ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-3 gy-3 border-top mt-3">
+				<li
+					*ngFor="let item of menuItemSeparateCollection | keyvalue"
+					class="col"
+				>
+					<a
+						(click)="closeMenu()"
+						[routerLinkActiveOptions]="{exact: true}"
+						[routerLinkActive]="'btn-outline-info'"
+						[routerLink]="['/part'+(item.key | slice:6)]"
+						class="h5 fw-normal btn btn-outline-secondary text-break w-100 h-100 mb-0"
+					>
+						<span class="text-black">Часть {{item.key | slice:6}}.</span>
+						<br>
+						{{item.value}}
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="d-flex justify-content-end border-top mt-3 pt-3">
+			<button
+				(click)="auth.login()"
+				class="btn btn-lg btn-dark mx-2"
+			>
+				Войти
+			</button>
+			<button
+				(click)="auth.logout()"
+				class="btn btn-lg btn-secondary"
+			>
+				Выйти
+			</button>
+		</div>
+
+	</div>
 </div>

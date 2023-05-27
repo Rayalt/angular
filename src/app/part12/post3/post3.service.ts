@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
 	providedIn: 'root',
@@ -10,7 +10,7 @@ export class Post3Service {
 	constructor(private http: HttpClient) {
 	}
 
-	create(post3: any): Observable<any>	 {
+	create(post3: any): Observable<any> {
 		return this.http.post(``, post3);
 	}
 

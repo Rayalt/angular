@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpEventType, HttpHeaders, HttpParams} from "@angular/common/http";
-import {Observable, tap, throwError, catchError, delay, map} from "rxjs";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpEventType, HttpHeaders, HttpParams} from '@angular/common/http';
+import {catchError, delay, map, Observable, tap, throwError} from 'rxjs';
 
 export interface TodoTemplate {
 	completed: boolean,
@@ -11,7 +11,8 @@ export interface TodoTemplate {
 @Injectable({providedIn: 'root'})
 
 export class HttpService {
-	constructor(private httpItem: HttpClient) {}
+	constructor(private httpItem: HttpClient) {
+	}
 
 	addTodo(newTodo: TodoTemplate): Observable<TodoTemplate> {
 

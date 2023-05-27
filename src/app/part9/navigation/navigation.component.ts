@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
 	selector: 'app-part9-navigation',
@@ -7,7 +7,8 @@ import {Router} from "@angular/router";
 })
 export class NavigationComponent implements OnInit {
 
-	constructor(private router: Router) { }
+	constructor(private router: Router) {
+	}
 
 	ngOnInit(): void {
 	}

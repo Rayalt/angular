@@ -12,7 +12,7 @@
 				cardClass="h-100"
 			>
 				<ng-template #body>
-					<img src="{{img}}" class="w-100" alt="">
+					<img alt="" class="w-100" src="{{img}}">
 				</ng-template>
 				<ng-template #footer>
 					<p class="card-text">
@@ -31,7 +31,7 @@
 				cardClass="h-100"
 			>
 				<ng-template #body>
-					<img [src]="img" class="w-100" alt="">
+					<img [src]="img" alt="" class="w-100">
 				</ng-template>
 				<ng-template #footer>
 					<p class="card-text">
@@ -56,13 +56,13 @@
 									При вводе
 								</label>
 								<input
-									type="text"
-									class="form-control"
-									placeholder="Введите текст"
-									aria-label="Введите текст"
-									aria-describedby="addon"
 									(input)="onInput2($event)"
+									aria-describedby="addon"
+									aria-label="Введите текст"
+									class="form-control"
 									id="eventInput"
+									placeholder="Введите текст"
+									type="text"
 								>
 							</div>
 
@@ -71,13 +71,13 @@
 									При поднятии клавиши
 								</label>
 								<input
-									type="text"
-									class="form-control"
-									placeholder="Введите текст"
-									aria-label="Введите текст"
-									aria-describedby="addon"
 									(keyup)="onInput($event)"
+									aria-describedby="addon"
+									aria-label="Введите текст"
+									class="form-control"
 									id="eventKeyup"
+									placeholder="Введите текст"
+									type="text"
 								>
 							</div>
 
@@ -86,13 +86,13 @@
 									По нажатию на <span class="text-primary font-monospace">enter</span>
 								</label>
 								<input
-									type="text"
-									class="form-control"
-									placeholder="Введите текст"
-									aria-label="Введите текст"
-									aria-describedby="addon"
 									(keyup.enter)="onInput2($event)"
+									aria-describedby="addon"
+									aria-label="Введите текст"
+									class="form-control"
 									id="eventKeyupEnter"
+									placeholder="Введите текст"
+									type="text"
 								>
 							</div>
 
@@ -101,14 +101,14 @@
 									По снятию фокуса
 								</label>
 								<input
-									type="text"
-									class="form-control"
-									placeholder="Введите текст"
-									aria-label="Введите текст"
-									aria-describedby="addon"
-									(blur)="onBlur(myInput.value)"
 									#myInput
+									(blur)="onBlur(myInput.value)"
+									aria-describedby="addon"
+									aria-label="Введите текст"
+									class="form-control"
 									id="eventBlur"
+									placeholder="Введите текст"
+									type="text"
 								>
 							</div>
 						</ng-template>
@@ -130,7 +130,7 @@
 						<ng-template #body>
 							<!--event binding, обратный binding, связывает typescript с html-->
 							<!--TODO: глянуть че это было-->
-							<button class="btn btn-dark my-3" (click)="onClick()">
+							<button (click)="onClick()" class="btn btn-dark my-3">
 								Click this button
 							</button>
 						</ng-template>

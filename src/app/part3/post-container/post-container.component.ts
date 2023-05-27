@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 export interface Post {
-	title: string
-	text: string
-	id?: number
+	title: string;
+	text: string;
+	id?: number;
 }
 
 @Component({

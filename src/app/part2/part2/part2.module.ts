@@ -1,17 +1,17 @@
-import { NgModule } from "@angular/core";
-import { DefaultComponent } from "../default/default.component";
-import { DirectivesComponent } from "../directives/directives.component";
-import { InterpolationComponent } from "../interpolation/interpolation.component";
-import { OneWayBindingComponent } from "../one-way-binding/one-way-binding.component";
-import { OnlyTsComponent } from "../only-ts/only-ts.component";
-import { PipesComponent } from "../pipes/pipes.component";
-import { TwoWayBindingComponent } from "../two-way-binding/two-way-binding.component";
-import { CommonModule } from "@angular/common";
-import { CardModule } from "../../shared/card/card.module";
-import {RouterModule, Routes} from "@angular/router";
-import { Part2Component } from "./part2.component";
-import { FormsModule } from "@angular/forms";
-import { HeaderSectionModule } from "../../shared/header-section/header-section.module";
+import {NgModule} from '@angular/core';
+import {DefaultComponent} from '../default/default.component';
+import {DirectivesComponent} from '../directives/directives.component';
+import {InterpolationComponent} from '../interpolation/interpolation.component';
+import {OneWayBindingComponent} from '../one-way-binding/one-way-binding.component';
+import {OnlyTsComponent} from '../only-ts/only-ts.component';
+import {PipesComponent} from '../pipes/pipes.component';
+import {TwoWayBindingComponent} from '../two-way-binding/two-way-binding.component';
+import {CommonModule} from '@angular/common';
+import {CardModule} from '../../shared/card/card.module';
+import {RouterModule, Routes} from '@angular/router';
+import {Part2Component} from './part2.component';
+import {FormsModule} from '@angular/forms';
+import {HeaderSectionModule} from '../../shared/header-section/header-section.module';
 
 const routeChildCollection: Routes = [
 	{
@@ -48,4 +48,5 @@ const routeChildCollection: Routes = [
 	],
 })
 
-export class Part2Module {}
+export class Part2Module {
+}

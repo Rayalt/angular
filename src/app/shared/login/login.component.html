@@ -9,19 +9,19 @@
 			<ng-template #body>
 				<div class="d-flex mb-3">
 					<button
-						class="btn btn-lg btn-dark"
 						(click)="auth.login()"
+						class="btn btn-lg btn-dark"
 					>
 						Войти
 					</button>
 					<button
-						class="btn btn-lg btn-secondary mx-2"
 						(click)="auth.logout()"
+						class="btn btn-lg btn-secondary mx-2"
 					>
 						Выйти
 					</button>
 				</div>
-				<a routerLink="/" class="link">Вернуться на главную</a>
+				<a class="link" routerLink="/">Вернуться на главную</a>
 			</ng-template>
 		</app-shared-card>
 	</div>

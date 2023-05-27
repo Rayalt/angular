@@ -1,8 +1,8 @@
-import {NgModule} from "@angular/core";
-import {LoginComponent} from "./login.component";
-import {CommonModule} from "@angular/common";
-import {CardModule} from "../card/card.module";
-import {RouterModule, Routes} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {LoginComponent} from './login.component';
+import {CommonModule} from '@angular/common';
+import {CardModule} from '../card/card.module';
+import {RouterModule, Routes} from '@angular/router';
 
 const routeChildCollection: Routes = [
 	{
@@ -25,4 +25,5 @@ const routeChildCollection: Routes = [
 	],
 })
 
-export class LoginModule {}
+export class LoginModule {
+}

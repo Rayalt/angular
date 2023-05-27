@@ -1,5 +1,5 @@
-import { CounterComponent } from "./counter.component";
-import { FormBuilder } from "@angular/forms";
+import {CounterComponent} from './counter.component';
+import {FormBuilder} from '@angular/forms';
 
 describe('CounterComponent', () => {
 
@@ -42,4 +42,4 @@ describe('CounterComponent', () => {
 
 		expect(control?.valid).toBeFalse();
 	});
-})
+});

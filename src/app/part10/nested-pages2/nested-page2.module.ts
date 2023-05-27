@@ -1,10 +1,10 @@
-import { NgModule } from "@angular/core";
-import { NestedPages2Component } from "./nested-pages2.component";
-import { Nested2Component } from "../nested2/nested2.component";
-import { SharedModule } from "../shared/shared.module";
-import { CommonModule } from "@angular/common";
-import {RouterModule, Routes} from "@angular/router";
-import { CardModule } from "../../shared/card/card.module";
+import {NgModule} from '@angular/core';
+import {NestedPages2Component} from './nested-pages2.component';
+import {Nested2Component} from '../nested2/nested2.component';
+import {SharedModule} from '../shared/shared.module';
+import {CommonModule} from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import {CardModule} from '../../shared/card/card.module';
 
 const routeChildCollection: Routes = [
 	{
@@ -34,4 +34,5 @@ const routeChildCollection: Routes = [
 		RouterModule,
 	]
 })
-export class NestedPage2Module {}
+export class NestedPage2Module {
+}

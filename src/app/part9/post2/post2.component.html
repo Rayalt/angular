@@ -9,7 +9,7 @@
 			</ng-template>
 
 			<ng-template #icon>
-				<button class="btn btn-dark mb-auto" [routerLink]="['/part9']">
+				<button [routerLink]="['/part9']" class="btn btn-dark mb-auto">
 					Назад
 				</button>
 			</ng-template>
@@ -20,8 +20,8 @@
 
 			<ng-template #footer>
 				<button
-					class="btn btn-secondary"
 					(click)="loadLastPost()"
+					class="btn btn-secondary"
 				>
 					Загрузить последний пост
 				</button>

@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'app-part11-dynamic-part1',
 	templateUrl: './dynamic-part1.component.html',
-	styles: [
-	]
+	styles: []
 })
 export class DynamicPart1Component implements OnInit {
 
 	modal: boolean = false;
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}

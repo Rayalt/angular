@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'app-shared-header-section',
@@ -6,7 +6,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderSectionComponent implements OnInit {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}
